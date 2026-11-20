@@ -1,67 +1,320 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" data-launch="soon" data-type="software">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0c2347" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#16315f" media="(prefers-color-scheme: dark)">
-<title>Sidestick PRO – A320 question bank and exams for pilots</title>
-<meta name="description" content="Sidestick PRO is an A320 question bank and exams app for pilots: tests, timed exams and explanations that say why.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sidestick PRO – A320 question bank and exams</title>
+<meta name="description" content="Tests and timed exams for A320 pilots on iPhone and iPad. Every answer explains why; aircraft answers name the manual section to read. 2 900+ questions in 33 topics.">
+<meta name="theme-color" content="#030d25">
+<meta property="og:title" content="Sidestick PRO – A320 question bank and exams">
+<meta property="og:description" content="Every answer explains why; aircraft answers name the manual section to read.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sidestick PRO">
-<meta property="og:title" content="Sidestick PRO – A320 question bank and exams for pilots">
-<meta property="og:description" content="Sidestick PRO is an A320 question bank and exams app for pilots: tests, timed exams and explanations that say why.">
-<meta property="og:image" content="https://sidestick.pro/og.png">
+<meta property="og:image" content="https://sidestick.pro/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sidestick PRO: A320 question bank and exams, over a cockpit glareshield at dusk">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/webp" media="(max-width: 700px)" imagesrcset="assets/img/fcu-dusk-phone-640.webp 640w, assets/img/fcu-dusk-phone-800.webp 800w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(min-width: 701px)" imagesrcset="assets/img/fcu-dusk-640.webp 640w, assets/img/fcu-dusk-1080.webp 1080w, assets/img/fcu-dusk-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="assets/brand.css">
+<link rel="stylesheet" href="assets/home.css">
+<script>document.documentElement.classList.add('js'); if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('no-motion');</script>
+<script src="assets/home.js" defer></script>
 </head>
 <body>
-<header class="hero"><div class="wrap">
-<a class="brand" href="./">Sidestick <b>PRO</b></a>
-<h1>A320 question bank and exams for pilots</h1>
-<p class="soon">Coming soon to the App Store.</p>
-<p class="ig"><a href="https://www.instagram.com/sidestick.pro/">Follow @sidestick.pro on Instagram</a></p>
-</div></header>
-<main class="wrap">
-<section class="quiz" aria-labelledby="qstem">
-<p class="cap">Try one: Hydraulics</p>
-<fieldset class="q">
-<legend id="qstem">If you lost the GREEN system, what equipment is lost?</legend>
-<div class="opt"><input type="radio" name="a" id="o1"><label for="o1"><span class="l">A</span><span class="t">Reverser 1, gear retraction and alternate braking.</span></label></div>
-<div class="opt right"><input type="radio" name="a" id="o2"><label for="o2"><span class="l">B</span><span class="t">Reverser 1, gear retraction and normal braking.</span></label></div>
-<div class="opt"><input type="radio" name="a" id="o3"><label for="o3"><span class="l">C</span><span class="t">Reverser 2, gear retraction and the cargo doors.</span></label></div>
-<div class="opt"><input type="radio" name="a" id="o4"><label for="o4"><span class="l">D</span><span class="t">Reverser 2, gear retraction and normal braking.</span></label></div>
-</fieldset>
-<p class="hint">Choose an answer to see why.</p>
-<div class="reveal">
-<h2 class="sub">Why</h2>
-<p>Losing the green system takes away reverser 1, landing gear retraction and normal braking. Braking continues on the yellow system, as alternate braking with anti-skid. Reverser 2 belongs to the yellow side, so it stays available.</p>
-<h2 class="sub">Easy to confuse</h2>
-<p>Alternate braking uses the yellow system, so it remains after a green loss; normal braking is the one lost.</p>
-<p class="ref">FCOM-PRO-ABN-HYD · FCOM-DSC-70-70</p>
+<!-- Built by site-src/build.mjs; edit the template in site-src/, not this file. -->
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav navy" id="nav">
+<div class="wrap bar">
+<a class="wordmark" href="#top" aria-label="Sidestick PRO, home"><svg class="mk" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4"><path d="M3 14h24l8 10-8 10H3z"/><path d="M35 24h11"/></g><path fill="currentColor" d="M9 21h12v6H9z"/></svg><span class="word">Sidestick</span><span class="pro">PRO</span></a>
+<nav aria-label="Main"><ul id="menu">
+<li><a href="#how">How it works</a></li>
+<li><a href="#topics">Topics</a></li>
+<li><a href="#plans">Plans</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li class="qb-li"><span class="qb" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.6 3.7-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg>My question bank <span class="soon">Soon</span></span></li>
+<li class="menu-note">In your browser soon. Coming soon to iPhone and iPad.</li>
+</ul></nav>
+<div class="end">
+<a class="btn btn-quiet try-btn" href="#try">Try a question</a>
+<button class="btn btn-quiet menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path class="i-open" d="M4 6.5h16M4 12h16M4 17.5h16"/><path class="i-close" d="M6 6l12 12M18 6 6 18"/></svg></button>
+</div>
+</div>
+</header>
+<main id="main" tabindex="-1">
+<div class="descent">
+<section class="hero navy" id="top" data-enter>
+<div class="wrap text">
+<p class="eyebrow enter" style="--d:60ms">A320 question bank</p>
+<h1 class="enter" style="--d:110ms">Where the A320 answer lives.</h1>
+<p class="fact enter" style="--d:150ms"><b>2&nbsp;900+</b> questions in 33 topics. Every answer says why; aircraft answers name the manual section to read.</p>
+<div class="actions enter" style="--d:180ms">
+<a class="btn btn-primary" href="#try">Try a question</a>
+</div>
+<p class="cta-note enter" style="--d:210ms"><b>Coming soon</b> to iPhone and iPad</p>
+</div>
+<div class="spacer"></div>
+<picture class="hero-photo">
+<source media="(max-width: 700px)" type="image/webp" srcset="assets/img/fcu-dusk-phone-640.webp 640w, assets/img/fcu-dusk-phone-800.webp 800w" sizes="100vw">
+<source type="image/webp" srcset="assets/img/fcu-dusk-640.webp 640w, assets/img/fcu-dusk-1080.webp 1080w, assets/img/fcu-dusk-1600.webp 1600w, assets/img/fcu-dusk-2400.webp 2400w" sizes="100vw">
+<img src="assets/img/fcu-dusk-1080.jpg" width="1080" height="400" alt="The A320 glareshield at dusk in cruise: the FCU with its altitude window lit, under a deep blue sky" fetchpriority="high">
+</picture>
+<div class="hero-tape" id="hero-tape" aria-hidden="true"><div class="strip"><ol class="drum"><li style="--o:-2;opacity:.55">21</li><li style="--o:-1;opacity:.75">49</li><li class="on" style="--o:0">22</li><li style="--o:1;opacity:.75">23</li><li style="--o:2;opacity:.55">52</li></ol></div><div class="window"><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M1 1H84L99 20L84 39H1Z"/></svg></div><span class="line"></span></div>
+</section>
+</div>
+<section class="reveal" data-theme="light" id="how" aria-labelledby="how-h">
+<div class="pin">
+<div class="stage">
+<div class="wrap">
+<div class="copy">
+<h2 id="how-h">Question, answer, why.</h2>
+<p class="lead">Four steps of every test, in real screens.</p>
+<ol class="steps-sr vh"><li>Read the question. A test has no time limit. Take your time. Screen: A question in a test, before it is answered.</li><li>Answer it. A miss turns red, and the right answer shows in green. Screen: The same question answered: the chosen option red with a cross, the right one green with a tick.</li><li>Open the why. The explanation says why; the picture lights the part it is about. Screen: The explanation: the answer, a short explanation and the hydraulic picture with the cargo doors lit.</li><li>See where you stand. Your score against the 75 % pass mark, and what to practise next. Screen: The result: 75 %, passed, with the missed questions to practise next.</li></ol>
+<div class="fpl" aria-hidden="true"><span class="track"></span><span class="flown"></span><span class="ac"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5c-.5 0-.9.4-.9.9v6.1L4 5.4v1.9l7.1 5v6.4c0 1.6.4 2.8.9 2.8s.9-1.2.9-2.8v-6.4l7.1-5V5.4l-7.1 3.1V2.4c0-.5-.4-.9-.9-.9z"/></svg></span><ol class="wps">
+<li class="wp"><b>Read the question.</b><span>A test has no time limit. Take your time.</span></li>
+<li class="wp"><b>Answer it.</b><span>A miss turns red, and the right answer shows in green.</span></li>
+<li class="wp"><b>Open the why.</b><span>The explanation says why; the picture lights the part it is about.</span></li>
+<li class="wp"><b>See where you stand.</b><span>Your score against the 75 % pass mark, and what to practise next.</span></li>
+</ol></div>
+</div>
+<div class="phone-slot" aria-hidden="true"><div class="iphone"><div class="glass"><div class="scr"><span class="island"></span><div class="sbar" aria-hidden="true"><img src="assets/screens/q-open.webp" alt="" width="600" height="1304" loading="lazy" decoding="async"></div><div class="film"><div class="frame-shot" data-s="1"><img src="assets/screens/q-open.webp" alt="A question in a test, before it is answered" width="600" height="1304" loading="lazy" decoding="async"></div><div class="frame-shot" data-s="2"><img src="assets/screens/q-wrong.webp" alt="The same question answered: the chosen option red with a cross, the right one green with a tick" width="600" height="1304" loading="lazy" decoding="async"></div><div class="frame-shot" data-s="3"><img src="assets/screens/q-why.webp" alt="The explanation: the answer, a short explanation and the hydraulic picture with the cargo doors lit" width="600" height="1304" loading="lazy" decoding="async"><span class="hl" style="--x:65.7%;--y:67.6%;--w:27.5%;--h:5.75%" aria-hidden="true"></span></div><div class="frame-shot" data-s="4"><img src="assets/screens/q-result.webp" alt="The result: 75 %, passed, with the missed questions to practise next" width="600" height="1304" loading="lazy" decoding="async"></div></div></div></div></div></div>
+<div class="mini" aria-hidden="true"><p><b>1 · Read the question.</b>A test has no time limit. Take your time.</p><p><b>2 · Answer it.</b>A miss turns red, and the right answer shows in green.</p><p><b>3 · Open the why.</b>The explanation says why; the picture lights the part it is about.</p><p><b>4 · See where you stand.</b>Your score against the 75 % pass mark, and what to practise next.</p></div>
+</div>
+</div>
+</div>
+<div class="wrap static-wrap"><ol class="steps4 static">
+<li><div class="iphone"><div class="glass"><div class="scr"><span class="island"></span><img src="assets/screens/q-open.webp" alt="A question in a test, before it is answered" width="600" height="1304" loading="lazy" decoding="async"></div></div></div><p class="cap"><b><span class="n">1</span>Read the question.</b>A test has no time limit. Take your time.</p></li>
+<li><div class="iphone"><div class="glass"><div class="scr"><span class="island"></span><img src="assets/screens/q-wrong.webp" alt="The same question answered: the chosen option red with a cross, the right one green with a tick" width="600" height="1304" loading="lazy" decoding="async"></div></div></div><p class="cap"><b><span class="n">2</span>Answer it.</b>A miss turns red, and the right answer shows in green.</p></li>
+<li><div class="iphone"><div class="glass"><div class="scr"><span class="island"></span><img src="assets/screens/q-why.webp" alt="The explanation: the answer, a short explanation and the hydraulic picture with the cargo doors lit" width="600" height="1304" loading="lazy" decoding="async"><span class="hl" style="--x:65.7%;--y:67.6%;--w:27.5%;--h:5.75%" aria-hidden="true"></span></div></div></div><p class="cap"><b><span class="n">3</span>Open the why.</b>The explanation says why; the picture lights the part it is about.</p></li>
+<li><div class="iphone"><div class="glass"><div class="scr"><span class="island"></span><img src="assets/screens/q-result.webp" alt="The result: 75 %, passed, with the missed questions to practise next" width="600" height="1304" loading="lazy" decoding="async"></div></div></div><p class="cap"><b><span class="n">4</span>See where you stand.</b>Your score against the 75 % pass mark, and what to practise next.</p></li>
+</ol></div>
+</section>
+<section class="teach screen" id="try" aria-labelledby="try-h">
+<div class="wrap try-b">
+<div class="head">
+<h2 id="try-h">Try one. Then read why.</h2>
+<p class="lead">A real question from the bank. Answer it, and the explanation and the manual reference open, as in the app.</p>
+<p class="more">One of 2&nbsp;900+ in 33 topics. <span>The app brings free questions from every topic, no account needed. <a href="#topics">See all 33 topics&nbsp;›</a></span></p>
+</div>
+<div class="qcard" id="chain">
+<p class="q-topic">Hydraulics</p>
+<p class="q-stem">Which hydraulic systems have engine driven pumps?</p>
+<ul class="opts" role="list">
+<li><button class="opt" type="button" data-ok="0"><span class="key">A</span>Green and blue.<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></li>
+<li><button class="opt" type="button" data-ok="1"><span class="key">B</span>Green and yellow.<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></li>
+<li><button class="opt" type="button" data-ok="0"><span class="key">C</span>Blue and yellow.<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></li>
+<li><button class="opt" type="button" data-ok="0"><span class="key">D</span>Green, blue and yellow.<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></li>
+</ul>
+<p class="hint" id="hint" aria-live="polite">Pick one. A test has no time limit.</p>
+<div class="rise"><div><div class="inner">
+<p class="step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v14H6a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12"/></svg>Short explanation</p>
+<div class="why">
+<p>Green and yellow have engine-driven pumps: engine 1 drives the green pump and engine 2 the yellow pump. Blue has no engine pump; an electric pump pressurises it, with the RAT as its emergency source. Yellow also has an electric pump and a hand pump, and the PTU links green and yellow so that either can pressurise the other.</p>
+<p class="confuse"><b>Easy to confuse</b>Blue is the system without an engine pump: its electric pump and the RAT power it.</p>
+</div>
+<p class="step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h9l5 5v11H5z"/><path d="M14 4v5h5"/></svg>References</p>
+<button class="refrow" type="button" aria-expanded="false" aria-controls="refpath"><span class="code-l">FCOM-DSC-29-10-20</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+<div class="path" id="refpath"><div>FCOM · Hydraulic · Description · Generation</div></div>
+<p class="note">Our own words, with the reference code. Nothing is copied from the manual.</p>
+</div></div></div>
+</div>
 </div>
 </section>
-<section class="method" aria-labelledby="mh">
-<h2 id="mh">Learn where to find the answer, and why</h2>
-<p>Explanations say why, name the manual section to look it up in, and show the system in a diagram where that helps.</p>
-<div class="phones">
-<figure><div class="phone"><img src="img/app-question.jpg" width="598" height="1300" alt="The Sidestick PRO question screen: a hydraulics question with four answer options, before it is answered" loading="lazy"></div></figure>
-<figure><div class="phone"><img src="img/app-expl.jpg" width="598" height="1300" alt="The explanation screen: a hydraulic system diagram with the PTU highlighted, an easy-to-confuse note and manual references" loading="lazy"></div></figure>
+<section class="pp" id="panel" aria-labelledby="pp-h">
+<div class="pp-pin"><div class="pp-stage"><div class="wrap">
+<div class="head">
+<h2 id="pp-h">The switch you press. The same switch in the picture.</h2>
+<p class="lead">Explanations are simple and clear, with schematics and graphics in the cockpit's colours.</p>
+</div>
+<div class="pair" data-boxes='[{"photo":[27,63,9,8.4],"drawn":[11.5,82,15,12]},{"photo":[36,57.6,10,9],"drawn":[30.6,82,18,12]},{"photo":[52.4,47.4,10.6,10],"drawn":[51.5,82,18,12]},{"photo":[65.6,38.6,11.8,11.4],"drawn":[74,82,15,12]}]'>
+<figure class="photo">
+<picture>
+<source type="image/webp" srcset="assets/img/overhead-elec-640.webp 640w, assets/img/overhead-elec-1080.webp 1080w" sizes="(max-width: 900px) 92vw, 560px">
+<img src="assets/img/overhead-elec-1080.jpg" width="1080" height="1021" loading="lazy" decoding="async" alt="The ELEC and AIR COND panels on the A320 overhead at night, with the GEN 1, APU GEN, EXT PWR and GEN 2 pushbuttons">
+</picture><span class="box" aria-hidden="true"><i><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="0" y="0" width="100" height="100" rx="8"/></svg></i></span>
+</figure>
+<div class="rt">
+<figure class="drawn"><div class="dw"><img src="assets/screens/elec-page.webp" width="1000" height="564" loading="lazy" decoding="async" alt="Our drawing of the A320 electrical system: batteries, DC and AC buses, transformer rectifiers, and GEN 1, APU GEN, EXT PWR and GEN 2"><span class="box" aria-hidden="true"><i><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x="0" y="0" width="100" height="100" rx="8"/></svg></i></span></div></figure>
+<ul class="srcs" aria-label="The four power sources, named the same on the panel and in the picture"><li data-i="0">GEN 1</li><li data-i="1">APU GEN</li><li data-i="2">EXT PWR</li><li data-i="3">GEN 2</li></ul>
+<p class="same">Same switch, same name, in both places.</p>
+</div>
+</div>
+</div></div></div>
+</section>
+<section class="tape-sec" id="topics" aria-labelledby="tape-h">
+<div class="stops" aria-hidden="true"></div>
+<div class="tape-stage">
+<div class="wrap">
+<div class="tape-intro">
+<h2 id="tape-h">Every topic on one scale.</h2>
+<p class="lead">Six sections, 33 topics, in the same order as the app's topic list, with the codes the references use.</p>
+<p class="also">Section totals count each question once; one question can sit in more than one topic.</p>
+<ol class="chapters" id="chapters">
+<li data-sec="Systems" data-q="2365"><h3>Systems<small>18 topics · 2&nbsp;365 questions</small></h3><ul>
+<li data-n="21" data-q="219" data-ref="FCOM-DSC-21"><span class="n">21</span>Air conditioning, pressurisation and ventilation<small>219<span class="vh"> questions</span></small></li>
+<li data-n="49" data-q="96" data-ref="FCOM-DSC-49"><span class="n">49</span>APU<small>96<span class="vh"> questions</span></small></li>
+<li data-n="22" data-q="300" data-ref="FCOM-DSC-22"><span class="n">22</span>Autoflight<small>300<span class="vh"> questions</span></small></li>
+<li data-n="23" data-q="83" data-ref="FCOM-DSC-23"><span class="n">23</span>Communications<small>83<span class="vh"> questions</span></small></li>
+<li data-n="52" data-q="77" data-ref="FCOM-DSC-52"><span class="n">52</span>Doors<small>77<span class="vh"> questions</span></small></li>
+<li data-n="24" data-q="158" data-ref="FCOM-DSC-24"><span class="n">24</span>Electrical<small>158<span class="vh"> questions</span></small></li>
+<li data-n="70" data-q="250" data-ref="FCOM-DSC-70"><span class="n">70</span>Engines<small>250<span class="vh"> questions</span></small></li>
+<li data-n="25" data-q="53" data-ref="FCOM-DSC-25"><span class="n">25</span>Equipment<small>53<span class="vh"> questions</span></small></li>
+<li data-n="26" data-q="82" data-ref="FCOM-DSC-26"><span class="n">26</span>Fire protection<small>82<span class="vh"> questions</span></small></li>
+<li data-n="27" data-q="227" data-ref="FCOM-DSC-27"><span class="n">27</span>Flight controls<small>227<span class="vh"> questions</span></small></li>
+<li data-n="28" data-q="114" data-ref="FCOM-DSC-28"><span class="n">28</span>Fuel<small>114<span class="vh"> questions</span></small></li>
+<li data-n="29" data-q="132" data-ref="FCOM-DSC-29"><span class="n">29</span>Hydraulics<small>132<span class="vh"> questions</span></small></li>
+<li data-n="30" data-q="99" data-ref="FCOM-DSC-30"><span class="n">30</span>Ice and rain protection<small>99<span class="vh"> questions</span></small></li>
+<li data-n="31" data-q="164" data-ref="FCOM-DSC-31"><span class="n">31</span>Indicating and recording<small>164<span class="vh"> questions</span></small></li>
+<li data-n="32" data-q="215" data-ref="FCOM-DSC-32"><span class="n">32</span>Landing gear<small>215<span class="vh"> questions</span></small></li>
+<li data-n="34" data-q="277" data-ref="FCOM-DSC-34"><span class="n">34</span>Navigation<small>277<span class="vh"> questions</span></small></li>
+<li data-n="35" data-q="62" data-ref="FCOM-DSC-35"><span class="n">35</span>Oxygen<small>62<span class="vh"> questions</span></small></li>
+<li data-n="36" data-q="85" data-ref="FCOM-DSC-36"><span class="n">36</span>Pneumatics<small>85<span class="vh"> questions</span></small></li>
+</ul></li>
+<li data-sec="Limitations" data-q="224"><h3>Limitations<small>1 topic · 224 questions</small></h3><ul>
+<li data-n="LIM" data-q="224" data-ref="FCOM-LIM"><span class="n">LIM</span>Operating limitations<small>224<span class="vh"> questions</span></small></li>
+</ul></li>
+<li data-sec="Procedures" data-q="838"><h3>Procedures<small>3 topics · 838 questions</small></h3><ul>
+<li data-n="NOR" data-q="344" data-ref="FCOM-PRO-NOR"><span class="n">NOR</span>Standard operating procedures<small>344<span class="vh"> questions</span></small></li>
+<li data-n="ABN" data-q="412" data-ref="FCOM-PRO-ABN"><span class="n">ABN</span>Abnormal and emergency procedures<small>412<span class="vh"> questions</span></small></li>
+<li data-n="MEM" data-q="103" data-ref="FCOM-PRO-ABN-ABN-MEM"><span class="n">MEM</span>Memory items<small>103<span class="vh"> questions</span></small></li>
+</ul></li>
+<li data-sec="Weather" data-q="97"><h3>Weather<small>1 topic · 97 questions</small></h3><ul>
+<li data-n="050" data-q="97" data-ref="EASA ATPL 050; ICAO, WMO"><span class="n">050</span>Weather reports and phenomena<small>97<span class="vh"> questions</span></small></li>
+</ul></li>
+<li data-sec="General aviation" data-q="310"><h3>General aviation<small>4 topics · 310 questions</small></h3><ul>
+<li data-n="PERF" data-q="139" data-ref="AFM-PERF"><span class="n">PERF</span>Performance<small>139<span class="vh"> questions</span></small></li>
+<li data-n="ATC" data-q="78" data-ref="ICAO, EASA SERA"><span class="n">ATC</span>ATC, airspace and phraseology<small>78<span class="vh"> questions</span></small></li>
+<li data-n="ABBR" data-q="41" data-ref="FCOM-GEN"><span class="n">ABBR</span>Abbreviations<small>41<span class="vh"> questions</span></small></li>
+<li data-n="MATH" data-q="64" data-ref="Worked from first principles"><span class="n">MATH</span>Practical calculations<small>64<span class="vh"> questions</span></small></li>
+</ul></li>
+<li data-sec="ATPL revision" data-q="111"><h3>ATPL revision<small>6 topics · 111 questions</small></h3><ul>
+<li data-n="081" data-q="28" data-ref="EASA ATPL 081"><span class="n">081</span>Principles of flight<small>28<span class="vh"> questions</span></small></li>
+<li data-n="022" data-q="24" data-ref="EASA ATPL 022"><span class="n">022</span>Flight instruments<small>24<span class="vh"> questions</span></small></li>
+<li data-n="061" data-q="17" data-ref="EASA ATPL 061"><span class="n">061</span>Navigation theory<small>17<span class="vh"> questions</span></small></li>
+<li data-n="031" data-q="15" data-ref="EASA ATPL 031"><span class="n">031</span>Mass and balance<small>15<span class="vh"> questions</span></small></li>
+<li data-n="040" data-q="15" data-ref="EASA ATPL 040"><span class="n">040</span>Human performance<small>15<span class="vh"> questions</span></small></li>
+<li data-n="010" data-q="16" data-ref="EASA ATPL 010"><span class="n">010</span>Air law<small>16<span class="vh"> questions</span></small></li>
+</ul></li>
+</ol>
+</div>
+<div class="topics-tape" id="topics-tape" aria-hidden="true">
+<div class="strip"><ol class="drum"></ol></div>
+<div class="window"><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M1 1H86L99 20L86 39H1Z"/></svg></div>
+</div>
+<div class="readout" id="readout" aria-hidden="true"><p class="ctr" aria-hidden="true"><span class="digits"></span><span>questions in this section</span></p></div>
+<div class="tape-foot">
+<span class="count" id="tape-count" aria-hidden="true">Section 1 of 6</span>
+<span class="go"><a href="#features">Skip the list&nbsp;›</a><a class="btn btn-quiet" href="#plans">See plans</a></span>
+</div>
+</div>
+</div>
+</section>
+<section class="feat screen" id="features" aria-labelledby="feat-h">
+<div class="wrap">
+<div class="head"><h2 id="feat-h">Built for ten minutes in the crew room.</h2></div>
+<div class="fb">
+<ul class="flist">
+<li class="feat-i"><h3>Tests that answer back</h3><p>Right turns green. A miss turns red and shows the right one.</p><div class="crop"><img class="lt" src="assets/screens/f-answer.webp" alt="Answer cards after a miss: the chosen one red, the right one green" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-answer-dark.webp" alt="Answer cards after a miss: the chosen one red, the right one green" width="640" height="440" loading="lazy" decoding="async"></div></li>
+<li class="feat-i"><h3>Exams against the clock</h3><p>30 questions for a topic, 60 for a mixed exam, one minute each. Pass mark 75&nbsp;%.</p><div class="crop"><img class="lt" src="assets/screens/f-exam.webp" alt="An exam question with the chosen answer marked in blue: no right or wrong until the exam is submitted" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-exam-dark.webp" alt="An exam question with the chosen answer marked in blue: no right or wrong until the exam is submitted" width="640" height="440" loading="lazy" decoding="async"></div></li>
+<li class="feat-i"><h3>Easy to confuse</h3><p>Each explanation ends with the item you are most likely to mix it up with.</p><div class="crop confuse-box" aria-hidden="true"><div class="cbx"><b>Easy to confuse</b><p>Blue is the system without an engine pump: its electric pump and the RAT power it.</p></div></div></li>
+<li class="feat-i"><h3>Systems drawn in cockpit colours</h3><p>Our own diagrams, with the part the answer is about lit up.</p><div class="crop"><img class="lt" src="assets/screens/f-drawn.webp" alt="The hydraulic picture: green, blue and yellow systems, the cargo doors lit" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-drawn-dark.webp" alt="The hydraulic picture: green, blue and yellow systems, the cargo doors lit" width="640" height="440" loading="lazy" decoding="async"></div></li>
+<li class="feat-i"><h3>Weak topics, picked for you</h3><p>Your last 30 results show where to spend the next session.</p><div class="crop"><img class="lt" src="assets/screens/f-stats.webp" alt="Statistics by topic: the topics under 75 % first, each with its average" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-stats-dark.webp" alt="Statistics by topic: the topics under 75 % first, each with its average" width="640" height="440" loading="lazy" decoding="async"></div></li>
+<li class="feat-i"><h3>Offline in the hotel</h3><p>Download once. Results, flags and notes sync when you are back online.</p><div class="crop"><img class="lt" src="assets/screens/f-offline.webp" alt="The Home card that downloads all questions for offline use" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-offline-dark.webp" alt="The Home card that downloads all questions for offline use" width="640" height="440" loading="lazy" decoding="async"></div></li>
+</ul>
+<div class="fside" aria-hidden="true"><div class="fframe"><div class="slide on"><div class="crop"><img class="lt" src="assets/screens/f-answer.webp" alt="Answer cards after a miss: the chosen one red, the right one green" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-answer-dark.webp" alt="Answer cards after a miss: the chosen one red, the right one green" width="640" height="440" loading="lazy" decoding="async"></div></div><div class="slide"><div class="crop"><img class="lt" src="assets/screens/f-exam.webp" alt="An exam question with the chosen answer marked in blue: no right or wrong until the exam is submitted" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-exam-dark.webp" alt="An exam question with the chosen answer marked in blue: no right or wrong until the exam is submitted" width="640" height="440" loading="lazy" decoding="async"></div></div><div class="slide"><div class="crop confuse-box" aria-hidden="true"><div class="cbx"><b>Easy to confuse</b><p>Blue is the system without an engine pump: its electric pump and the RAT power it.</p></div></div></div><div class="slide"><div class="crop"><img class="lt" src="assets/screens/f-drawn.webp" alt="The hydraulic picture: green, blue and yellow systems, the cargo doors lit" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-drawn-dark.webp" alt="The hydraulic picture: green, blue and yellow systems, the cargo doors lit" width="640" height="440" loading="lazy" decoding="async"></div></div><div class="slide"><div class="crop"><img class="lt" src="assets/screens/f-stats.webp" alt="Statistics by topic: the topics under 75 % first, each with its average" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-stats-dark.webp" alt="Statistics by topic: the topics under 75 % first, each with its average" width="640" height="440" loading="lazy" decoding="async"></div></div><div class="slide"><div class="crop"><img class="lt" src="assets/screens/f-offline.webp" alt="The Home card that downloads all questions for offline use" width="640" height="440" loading="lazy" decoding="async"><img class="dk" src="assets/screens/f-offline-dark.webp" alt="The Home card that downloads all questions for offline use" width="640" height="440" loading="lazy" decoding="async"></div></div></div><div class="idx"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><span class="rb"></span></div></div>
+</div>
+</div>
+</section>
+<section class="acct screen" id="account" aria-labelledby="acct-h">
+<div class="wrap">
+<div class="copy">
+<h2 id="acct-h">One account, every screen.</h2>
+<p class="lead">One login. One subscription. iPhone and iPad; in your browser soon. One device is active at a time, and your progress follows you.</p>
+</div>
+<div class="devs">
+<div class="ipad"><div class="glass"><div class="scr"><img class="lt" src="assets/screens/ipad-question.webp" alt="Sidestick PRO on iPad: a question with Question, Explanation and Comments tabs" width="1200" height="900" loading="lazy" decoding="async"><img class="dk" src="assets/screens/ipad-question-dark.webp" alt="Sidestick PRO on iPad: a question with Question, Explanation and Comments tabs" width="1200" height="900" loading="lazy" decoding="async"></div></div></div>
+<span class="link" aria-hidden="true"><i></i></span>
+<div class="iphone"><div class="glass"><div class="scr"><span class="island"></span><img class="lt" src="assets/screens/q-open.webp" alt="Sidestick PRO on iPhone: the same question, The cargo doors are powered by" width="600" height="1304" loading="lazy" decoding="async"><img class="dk" src="assets/screens/q-open-dark.webp" alt="Sidestick PRO on iPhone: the same question, The cargo doors are powered by" width="600" height="1304" loading="lazy" decoding="async"></div></div></div>
+<p class="brow"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><span class="bl">Your browser</span><span class="soon">Soon</span></p>
+</div>
+</div>
+</section>
+<section class="plans screen" id="plans" aria-labelledby="plans-h">
+<div class="wrap">
+<div class="top">
+<h2 id="plans-h">Full access, for as long as you need it.</h2>
+<p class="lead">One level: every question, exam and explanation. Pick the length that fits what is ahead of you.</p>
+</div>
+<div class="two">
+<div class="full navy">
+<h3>Full access</h3>
+<p class="sub">Everything, in every plan. Only the length changes.</p>
+<ul class="incl" id="incl"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>2&nbsp;900+ questions</b><br><span>in 33 topics, from systems to ATPL revision</span></p></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>Tests that answer back</b><br><span>green when right; red and the right one when not</span></p></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>The why, in plain words</b><br><span>every explanation says why it is so</span></p></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>The manual section</b><br><span>each aircraft answer names the FCOM, AFM or FCTM section</span></p></li><li class="extra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>Schematics in cockpit colours</b><br><span>our own pictures, with the part the answer is about lit</span></p></li><li class="extra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>Timed exams</b><br><span>30 for a topic, 60 mixed, pass mark 75&nbsp;%</span></p></li><li class="extra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>Easy-to-confuse notes</b><br><span>the item you are most likely to mix it up with</span></p></li><li class="extra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>Weak topics, picked for you</b><br><span>from your last 30 results</span></p></li><li class="extra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>Offline</b><br><span>download once; results sync later</span></p></li><li class="extra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><p><b>iPhone and iPad</b><br><span>one account; in your browser soon</span></p></li></ul>
+<button class="more6" type="button" aria-expanded="false" aria-controls="incl">and 6 more</button>
+</div>
+<div>
+<div class="picks" role="radiogroup" aria-label="Plan length"><span class="ring" aria-hidden="true"></span><button type="button" role="radio" aria-checked="false" class="pick" data-m="1" data-name="1 month" data-price="€12.99"><span class="who">Assessment ahead</span><span class="len">1 month</span><span class="fit">Assessment, simulator check or interview soon.</span><span class="price">€12.99</span><span class="pm">€12.99 a month</span><span class="was">Billed every month</span></button><button type="button" role="radio" aria-checked="false" class="pick" data-m="3" data-name="3 months" data-price="€29.99"><span class="who">Type rating</span><span class="len">3 months</span><span class="fit">Type rating, start to finish.</span><span class="price">€29.99</span><span class="pm">€10.00 a month</span><span class="was"><span class="vh">3 months at the monthly price: </span><s>€38.97</s> <span class="save">Save 23&nbsp;%</span></span></button><button type="button" role="radio" aria-checked="false" class="pick" data-m="6" data-name="6 months" data-price="€44.99"><span class="who">First officer · Upgrade</span><span class="len">6 months</span><span class="fit">First officer on the line, from one recurrent check to the next, or the months before a command upgrade.</span><span class="price">€44.99</span><span class="pm">€7.50 a month</span><span class="was"><span class="vh">6 months at the monthly price: </span><s>€77.94</s> <span class="save">Save 42&nbsp;%</span></span></button><button type="button" role="radio" aria-checked="true" class="pick best" data-m="12" data-name="12 months" data-price="€69.99"><span class="tag">Best value</span><span class="who">Steady progress · Captain</span><span class="len">12 months</span><span class="fit">Steady progress all year or a captain keeping it fresh.</span><span class="price">€69.99</span><span class="pm">€5.83 a month</span><span class="was"><span class="vh">12 months at the monthly price: </span><s>€155.88</s> <span class="save">Save 55&nbsp;%</span></span></button></div>
+<div class="chosen">
+<p class="what" aria-live="polite">Chosen: <b class="cn">12 months, €69.99</b></p>
+<div class="buyline"><a class="btn btn-primary" href="#try">Try a question</a><span class="btn btn-quiet" aria-disabled="true">Subscribe <span class="soon">Soon</span></span></div>
+</div>
+<p class="fine">Plans open when the app is in the App Store. Prices in euros, VAT included. Plans renew automatically; cancel any time in your App Store settings.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="faq screen" id="faq" aria-labelledby="faq-h">
+<div class="wrap">
+<div class="faq-h"><h2 id="faq-h">Before you start.</h2><p class="after">Anything else: <a href="mailto:support@sidestick.pro">support@sidestick.pro</a></p></div>
+<div>
+<div class="faq-ix" hidden></div>
+<div class="faq-list">
+<details open><summary>Where do the answers come from?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Aircraft answers are checked against the FCOM, AFM or FCTM; weather and ATC answers against ICAO, WMO and EASA rules; ATPL revision against the textbook facts. The explanation is in our own words and, where a document applies, names the section to read.</p></details>
+<details><summary>Is Sidestick PRO made by Airbus?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. We are not affiliated with or endorsed by Airbus. The manuals are cited for reference only, by their section codes.</p></details>
+<details><summary>Do I need an account to try it?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. A set of free questions from every topic works without an account. You sign in only to buy full access.</p></details>
+<details><summary>Can I use it on iPhone and iPad?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Yes, with one account; your browser follows. One device is active at a time, and your progress syncs to the others.</p></details>
+<details><summary>Does it work offline?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Yes. The bank downloads once; tests, exams and explanations then work without a connection. Comments load when you are back online.</p></details>
+<details><summary>What if I find a mistake?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Press the report button on the question and say what is wrong. Our team checks every report.</p></details>
+</div>
+</div>
+</div>
+</section>
+<section class="close navy" id="close" aria-labelledby="close-h"><span class="dawn" aria-hidden="true"></span>
+<div class="wrap">
+<div class="copy">
+<h2 id="close-h">Revise between flights, not instead of sleep.</h2>
+<div>
+<p class="lead">Until the app is out, the question above works right here, with no account.</p>
+<div class="go soon-go"><a class="btn btn-primary" href="#try">Try a question</a><p class="soon-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5.2h3"/></svg>Coming soon to iPhone and iPad</p></div>
+</div>
+</div>
+<figure class="ph">
+<picture>
+<source type="image/webp" srcset="assets/img/close-dome-640.webp 640w" sizes="(max-width: 1000px) 92vw, 480px">
+<img src="assets/img/close-dome-640.jpg" width="640" height="360" loading="lazy" decoding="async" alt="The overhead lighting and signs switches at night, the DOME switch among them">
+</picture>
+</figure>
 </div>
 </section>
 </main>
-<footer class="foot"><div class="inner">
+<footer>
+<div class="wrap">
+<div class="top">
+<a class="wordmark" href="#top" aria-label="Sidestick PRO, back to top"><svg class="mk" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4"><path d="M3 14h24l8 10-8 10H3z"/><path d="M35 24h11"/></g><path fill="currentColor" d="M9 21h12v6H9z"/></svg><span class="word">Sidestick</span><span class="pro">PRO</span></a>
 <nav aria-label="Footer">
-<a href="privacy/">Privacy Policy</a>
-<a href="terms/">Terms of Use</a>
-<a href="support/">Support</a>
-<a href="https://www.instagram.com/sidestick.pro/">Instagram</a>
+<a href="/privacy/">Privacy Policy</a>
+<a href="/terms/">Terms of Use</a>
+<a href="/support/">Support</a>
 </nav>
+</div>
 <p>Sidestick PRO is a product of MB EPINI (company code 307536669). Support: <a href="mailto:support@sidestick.pro">support@sidestick.pro</a>.</p>
-<p>Not affiliated with or endorsed by Airbus.</p>
-</div></footer>
+<p>Not affiliated with or endorsed by Airbus. Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+<p>Cockpit photographs: Sidestick PRO's own, cropped. App screens: the Sidestick PRO app.</p>
+</div>
+</footer>
 </body>
 </html>

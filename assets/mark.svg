@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Sidestick PRO mark: a tape's readout box with its value, and the reference line running out of the point. Own drawing. -->
+  <g fill="none" stroke="#EAF0F7" stroke-width="4" stroke-linejoin="miter"><path d="M3 14h24l8 10-8 10H3z"/><path d="M35 24h11"/></g>
+  <path fill="#EAF0F7" d="M9 21h12v6H9z"/>
+</svg>
