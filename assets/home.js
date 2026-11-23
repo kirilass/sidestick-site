@@ -2,20 +2,30 @@
 const root = document.documentElement;
 const sysReduce = matchMedia('(prefers-reduced-motion: reduce)');
 const still = () => sysReduce.matches || root.classList.contains('force-still');
+const shortMQ = matchMedia('(max-height: 520px), (max-width: 260px)');
+const short = () => shortMQ.matches;
+const tapeStill = () => still() || short();
 const $ = (s, el = document) => el.querySelector(s), $$ = (s, el = document) => [...el.querySelectorAll(s)];
-function setThemeColour() {
-const m = $('meta[name="theme-color"]:not([media])');
-if (m) m.content = root.dataset.theme === 'light' ? '#F4F7FC' : '#030d25';
+const themeMeta = $('meta[name="theme-color"]:not([media])'), NIGHT = themeMeta ? themeMeta.content : '#030d25';
+let ground = '', lightGround = '', themeNow = '';
+function setThemeColour(over, light) {
+if (!themeMeta) return;
+if (!ground) { ground = getComputedStyle(document.body).backgroundColor; const ls = $('.reveal[data-theme="light"]'); lightGround = ls ? getComputedStyle(ls).backgroundColor : ground; }
+const c = over ? NIGHT : light ? lightGround : ground;
+if (c !== themeNow) { themeMeta.content = c; themeNow = c; }
 }
 const nav = $('#nav'), mb = $('.menu-btn', nav), hero = $('.hero');
-const setNav = () => {
-const over = hero.getBoundingClientRect().bottom > 68;
-nav.classList.toggle('navy', over && !nav.classList.contains('open'));
-const lightScene = document.querySelector('.reveal[data-theme="light"]'), lr = lightScene && lightScene.getBoundingClientRect();
-if (lr && !over && lr.top <= 68 && lr.bottom > 68) nav.dataset.theme = 'light'; else delete nav.dataset.theme;
+const lightScene = $('.reveal[data-theme="light"]');
+const setNav = (hr = hero.getBoundingClientRect(), lr = lightScene && lightScene.getBoundingClientRect()) => {
+const over = hr.bottom > 68, open = nav.classList.contains('open');
+nav.classList.toggle('navy', over && !open);
+const light = !!lr && !over && lr.top <= 68 && lr.bottom > 68;
+if (light) nav.dataset.theme = 'light'; else delete nav.dataset.theme;
 nav.classList.toggle('solid', !over || scrollY > 24);
+setThemeColour(over && !open, light);
 };
-addEventListener('resize', setNav); setNav();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { ground = ''; setNav(); });
+addEventListener('resize', () => setNav()); setNav();
 mb.addEventListener('click', () => { const o = !nav.classList.contains('open'); nav.classList.toggle('open', o); mb.setAttribute('aria-expanded', o); mb.setAttribute('aria-label', o ? 'Close menu' : 'Menu'); setNav(); });
 $$('#menu a', nav).forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); mb.setAttribute('aria-label', 'Menu'); setNav(); }));
 const chain = $('#chain'), hint = $('#hint'), stacked = matchMedia('(max-width: 1000px)');
@@ -49,10 +59,15 @@ const slotAt = pos => { pos = Math.min(END, Math.max(0, pos)); const a = Math.mi
 function drum(el) {
 const ol = $('.drum', el); ol.textContent = '';
 const items = SLOTS.map((s, i) => { const li = document.createElement('li'); li.textContent = s.label; if (s.cls) li.className = s.cls; ol.append(li); return { li, at: i, chapter: !!s.stop }; });
+let mh = 0, mrad = 0, mstep = 0;
+addEventListener('resize', () => { mh = 0; });
 return pos => {
-const sp = slotAt(pos), h = items.find(x => x.chapter).li.offsetHeight || 56;
-const rad = Math.max((h / 2) / Math.tan(10 * Math.PI / 180), Math.min(el.clientHeight, 640) * .46);
-const STEP = 2 * Math.atan((h / 2) / rad) * 180 / Math.PI;
+if (!mh) {
+const oh = items.find(x => x.chapter).li.offsetHeight, hh = oh || 56;
+mrad = Math.max((hh / 2) / Math.tan(10 * Math.PI / 180), Math.min(el.clientHeight, 640) * .46);
+mstep = 2 * Math.atan((hh / 2) / mrad) * 180 / Math.PI; mh = oh;
+}
+const sp = slotAt(pos), rad = mrad, STEP = mstep;
 for (const { li, at, chapter } of items) {
 const a = (sp - at) * STEP;
 if (Math.abs(a) > 84) { li.style.opacity = 0; li.style.transform = 'none'; li.classList.remove('on'); continue; }
@@ -76,9 +91,10 @@ line.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duratio
 if (navigator.connection && navigator.connection.saveData) root.classList.add('save-data');
 const descent = $('.descent'), photo = $('.hero-photo img'), heroWords = $('.hero .text');
 const sm = x => { x = Math.min(1, Math.max(0, x)); return x * x * (3 - 2 * x); };
-function descentFrame() {
+const snap = x => { const i = Math.floor(x); return i + sm((x - i - .35) / .3); };
+function descentFrame(r) {
 if (still() || root.classList.contains('save-data')) { photo.style.transform = heroWords.style.transform = heroWords.style.opacity = ''; return; }
-const r = descent.getBoundingClientRect(), span = r.height - innerHeight;
+r = r || descent.getBoundingClientRect(); const span = r.height - innerHeight;
 if (span <= 0 || r.bottom < 0) return;
 const p = Math.min(1, Math.max(0, -r.top / span));
 photo.style.transform = `scale(${(1 + .3 * sm(p)).toFixed(4)})`;
@@ -98,7 +114,7 @@ $$('.static li', rev).forEach(li => io.observe(li));
 }
 const pin = $('.pin', rev), film = $('.film', rev), fpl = $('.fpl', rev);
 const ac = $('.ac', fpl), flown = $('.flown', fpl), wps = $$('.wp', fpl), minis = $$('.mini p', rev), filmHl = $('.hl', film);
-const wide = matchMedia('(min-width: 901px)');
+const wide = matchMedia('(min-width: 701px)');
 let hlLit = false, a0 = 0, a1 = 0;
 const track = $('.track', fpl);
 function layoutFpl() {
@@ -111,9 +127,9 @@ for (const el of [track, flown]) { el.style.top = ''; el.style.bottom = ''; el.s
 }
 }
 addEventListener("resize", layoutFpl); addEventListener("load", layoutFpl); layoutFpl();
-function revealFrame() {
-if (root.classList.contains('save-data')) return;
-const r = pin.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
+function revealFrame(r) {
+if (root.classList.contains('save-data') || short()) return;
+r = r || pin.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
 const p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))), t = p * 3;
 const k = Math.min(2, Math.floor(t)), pan = k + sm((t - k - .2) / .6);
 film.style.transform = `translateX(${(-pan * 100).toFixed(2)}%)`;
@@ -121,37 +137,41 @@ const c = a0 + (a1 - a0) * p - 12;
 if (wide.matches) { ac.style.transform = `translateY(${c.toFixed(1)}px)`; flown.style.transform = `scaleY(${p.toFixed(4)})`; }
 else { ac.style.transform = `translateX(${c.toFixed(1)}px) rotate(-90deg)`; flown.style.transform = `scaleX(${p.toFixed(4)})`; }
 const near = Math.round(t);
-wps.forEach((w, i) => { w.classList.toggle('on', i === near); w.classList.toggle('past', i < near); });
+wps.forEach((w, i) => { w.classList.toggle('on', i === near); w.classList.toggle('past', i < near); w.classList.toggle('at', i === near && Math.abs(t - near) < .2); });
 minis.forEach((m, i) => { const d = i - t; m.style.transform = `translateY(${(d * 70).toFixed(1)}px)`; m.style.opacity = Math.min(1, Math.max(0, 1 - Math.abs(d) * 1.8)).toFixed(3); });
 if (Math.abs(pan - 2) < .01 && !hlLit) { pulse(film); hlLit = true; }
 if (Math.abs(pan - 2) > .3 && hlLit) { hlLit = false; filmHl.classList.remove('on'); }
 }
 const ppPin = $('.pp-pin'), pair = $('.pp .pair'), BOX = JSON.parse(pair.dataset.boxes), ppBoxes = $$('.pp .box'), srcs = $$('.pp .srcs li');
-const place = (box, r) => { const W = box.clientWidth, H = box.clientHeight; box.firstElementChild.style.transform = `translate(${(r[0] / 100 * W).toFixed(1)}px, ${(r[1] / 100 * H).toFixed(1)}px) scale(${(r[2] / 100 * W / 100).toFixed(4)}, ${(r[3] / 100 * H / 100).toFixed(4)})`; };
-function panelFrame() {
-if (root.classList.contains('save-data')) return;
-const r = ppPin.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
+let boxSize = [];
+const measureBoxes = () => { boxSize = ppBoxes.map(b => [b.clientWidth, b.clientHeight]); };
+const place = (k, r) => { const box = ppBoxes[k], [W, H] = boxSize[k]; box.firstElementChild.style.transform = `translate(${(r[0] / 100 * W).toFixed(1)}px, ${(r[1] / 100 * H).toFixed(1)}px) scale(${(r[2] / 100 * W / 100).toFixed(4)}, ${(r[3] / 100 * H / 100).toFixed(4)})`; };
+function panelFrame(r) {
+if (root.classList.contains('save-data') || short()) return;
+r = r || ppPin.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
+if (!boxSize.length || !boxSize[0][0]) measureBoxes();
 const t = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))) * 3, k = Math.min(2, Math.floor(t)), f = sm((t - k - .3) / .4);
 const mix = (a, b) => a.map((v, i) => v + (b[i] - v) * f);
-place(ppBoxes[0], mix(BOX[k].photo, BOX[k + 1].photo)); place(ppBoxes[1], mix(BOX[k].drawn, BOX[k + 1].drawn));
+place(0, mix(BOX[k].photo, BOX[k + 1].photo)); place(1, mix(BOX[k].drawn, BOX[k + 1].drawn));
 const on = Math.round(t); srcs.forEach((l, i) => l.classList.toggle('on', i === on));
 }
-addEventListener('load', panelFrame); addEventListener('resize', panelFrame); $$('.pp img').forEach(i => i.addEventListener('load', panelFrame));
+const remeasure = () => { measureBoxes(); panelFrame(); };
+addEventListener('load', remeasure); addEventListener('resize', remeasure); $$('.pp img').forEach(i => i.addEventListener('load', remeasure));
 const feats = $$('.flist .feat-i'), slides = $$('.fframe .slide'), fbox = $('.idx .rb');
 let fcur = -1;
-function featFrame() {
+function featFrame(tops = feats.map(li => li.getBoundingClientRect().top)) {
 let k = 0; const mid = innerHeight / 2;
-feats.forEach((li, i) => { if (li.getBoundingClientRect().top < mid) k = i; });
+tops.forEach((t, i) => { if (t < mid) k = i; });
 if (k === fcur) return;
 const down = k > fcur; fcur = k;
 feats.forEach((li, i) => li.classList.toggle('on', i === k));
 slides.forEach((sl, i) => { sl.classList.toggle('on', i === k); sl.classList.toggle('up', i !== k && down && i < k); });
 fbox.style.transform = `translateY(${k * 100}%)`;
 }
-addEventListener('resize', featFrame); featFrame();
+addEventListener('resize', () => featFrame()); featFrame();
 const devs = $('.acct .devs'), dlink = $('.link', devs);
 if ('IntersectionObserver' in window && devs) {
-const io2 = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; io2.disconnect(); dlink.style.setProperty('--len', dlink.offsetWidth + 'px'); devs.classList.add('in'); }), { threshold: .4 });
+const io2 = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; io2.disconnect(); if (dlink) dlink.style.setProperty('--len', dlink.offsetWidth + 'px'); devs.classList.add('in'); }), { threshold: .4 });
 io2.observe(devs);
 } else if (devs) devs.classList.add('in');
 const picks = $$('.picks .pick'), ring = $('.picks .ring'), cn = $('.chosen .cn'), cn2 = $('.chosen .cn2');
@@ -191,9 +211,9 @@ t.addEventListener('keydown', e => { const d = { ArrowDown: 1, ArrowUp: -1, Arro
 addEventListener('resize', mark); addEventListener('load', mark); mark();
 }
 const closeSec = $('#close'), dawn = $('.dawn', closeSec);
-function dawnFrame() {
+function dawnFrame(r) {
 if (root.classList.contains('save-data')) return;
-const r = closeSec.getBoundingClientRect(); if (r.top > innerHeight || r.bottom < 0) return;
+r = r || closeSec.getBoundingClientRect(); if (r.top > innerHeight || r.bottom < 0) return;
 const p = Math.min(1, Math.max(0, (innerHeight - r.top) / (r.height + innerHeight * .3)));
 dawn.style.opacity = (p * p).toFixed(3);
 }
@@ -204,7 +224,7 @@ const LEN = [], CUM = [0];
 const layoutTape = () => {
 const ph = innerWidth <= 900 ? .75 : 1;
 S.forEach((s, k) => { LEN[k] = Math.round(Math.max(180, 22 * (s.b - s.a + 1)) * ph); CUM[k + 1] = CUM[k] + LEN[k]; });
-if (!still()) sec.style.height = `calc(100svh + ${CUM[S.length]}px)`; else sec.style.height = '';
+if (!tapeStill()) sec.style.height = `calc(100svh + ${CUM[S.length]}px)`; else sec.style.height = '';
 $$('i', stops).forEach((el, k) => { el.style.top = `${CUM[k] + .12 * LEN[k]}px`; });
 sec.dataset.stops = JSON.stringify(CUM);
 };
@@ -227,18 +247,18 @@ function counter(s) {
 const v = String(s.q).padStart(4, '0'); ctr.dataset.value = s.q;
 const t = reads[S.indexOf(s)], st = t && $('.steps', t);
 ctr.style.transform = st && !matchMedia('(min-width: 901px)').matches ? `translateY(${st.offsetTop + st.offsetHeight + 14}px)` : '';
-cols.forEach((c, i) => { c.style.transform = `translateY(${-(+v[i])}em)`; const hide = (i === 0 && s.q < 1000) || (i === 1 && s.q < 100); c.style.display = hide ? 'none' : ''; if (i === 0) $('.gap', digits).style.display = hide ? 'none' : ''; });
+cols.forEach((c, i) => { c.style.transform = `translateY(${-(+v[i])}em)`; const hide = (i === 0 && s.q < 1000) || (i === 1 && s.q < 100); c.classList.toggle('off', hide); if (i === 0) $('.gap', digits).classList.toggle('off', hide); });
 }
 counter(S[0]);
 if (document.fonts) document.fonts.ready.then(() => counter(S[Math.max(0, lastSec)]));
 let last = -2, lastSec = -1, lit = -1;
 function follow() { const el = tops[lit], box = el.parentNode, over = box.scrollHeight > box.clientHeight + 1; box.classList.toggle('clip', over); if (over) box.scrollTop = el.offsetTop - box.clientHeight / 2 + el.offsetHeight / 2; }
-function tapeFrame() {
-const r = sec.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
+function tapeFrame(r) {
+r = r || sec.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
 const y = Math.min(CUM[N] - 1e-3, Math.max(0, -r.top));
 let k = 0; while (k < N - 1 && y >= CUM[k + 1]) k++;
 const f = (y - CUM[k]) / LEN[k], s = S[k], nx = S[k + 1];
-const pos = f < .12 ? s.a : f < .74 ? s.a + (s.b - s.a) * sm((f - .12) / .62) : nx ? s.b + (nx.a - s.b) * sm((f - .74) / .26) : s.b;
+const pos = snap(f < .12 ? s.a : f < .74 ? s.a + (s.b - s.a) * sm((f - .12) / .62) : nx ? s.b + (nx.a - s.b) * sm((f - .74) / .26) : s.b);
 topics(pos);
 const near = Math.round(pos), shown = f > .9 && nx ? k + 1 : k;
 if (shown !== last) { reads.forEach((el, i) => { el.classList.toggle('on', i === shown); el.classList.toggle('up', i < shown); }); last = shown; }
@@ -246,17 +266,27 @@ if (T[near].k !== lastSec) { lastSec = T[near].k; cnt.textContent = `Section ${l
 if (near !== lit) { tops.forEach(el => el.classList.toggle('lit', +el.dataset.i === near)); lit = near; follow(); }
 }
 let raf = 0, live = false;
-const frame = () => { raf = 0; setNav(); featFrame(); if (still()) return; descentFrame(); revealFrame(); panelFrame(); tapeFrame(); dawnFrame(); };
+const frame = () => {
+raf = 0;
+const run = !still(), rest = short();
+const hr = hero.getBoundingClientRect(), lr = lightScene && lightScene.getBoundingClientRect(), ft = feats.map(li => li.getBoundingClientRect().top);
+const dr = run && descent.getBoundingClientRect(), cr = run && closeSec.getBoundingClientRect();
+const pr = run && !rest && pin.getBoundingClientRect(), ppr = run && !rest && ppPin.getBoundingClientRect(), tr = run && !rest && sec.getBoundingClientRect();
+setNav(hr, lr); featFrame(ft);
+if (!run) return;
+descentFrame(dr); if (!rest) { revealFrame(pr); panelFrame(ppr); tapeFrame(tr); } dawnFrame(cr);
+};
 const req = () => { if (!raf) raf = requestAnimationFrame(frame); };
 function setMode() {
 const s = still();
 root.classList.toggle('no-motion', s);
+root.classList.toggle('short', short());
 if (!live) { addEventListener('scroll', req, { passive: true }); addEventListener('resize', req); live = true; }
 layoutTape();
 if (s) { hero22(AP); $$('.hl').forEach(h => h.classList.add('on')); descentFrame(); dawn.style.opacity = ''; }
 else frame();
 }
-sysReduce.addEventListener('change', setMode);
+sysReduce.addEventListener('change', setMode); shortMQ.addEventListener('change', setMode);
 setMode();
 rollHero();
 })();
