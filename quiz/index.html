@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://frpgwgeytmksoqvjuntb.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#030d25" />
+    <title>Free A320 quiz – Sidestick PRO</title>
+    <meta name="description" content="Ten A320 questions from every part of the question bank. Every answer says why. Free, no account, about five minutes." />
+    <link rel="canonical" href="https://sidestick.pro/quiz/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sidestick PRO" />
+    <meta property="og:url" content="https://sidestick.pro/quiz/" />
+    <meta property="og:title" content="Free A320 quiz – Sidestick PRO" />
+    <meta property="og:description" content="Ten A320 questions. Every answer says why. Free, no account." />
+    <meta property="og:image" content="https://sidestick.pro/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sidestick PRO: A320 question bank and exams, over a cockpit glareshield at dusk" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/mark.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/assets/fonts/Archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/brand.css" />
+    <style>:root { --nav-h: 68px; }
+:root { --gutter: max(clamp(16px, 4vw, 48px), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px)); }
+.wrap { width: min(1240px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+.skip { position: absolute; left: 16px; top: -60px; z-index: 60; padding: 10px 14px; background: var(--action); color: var(--on-action); border-radius: var(--r-2); }
+.skip:focus { top: 12px; }
+/* buttons: one pair. Primary is filled (cyan at night as the approved site, true blue in light), quiet is outlined. */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: var(--r-2); font: 600 16px/1 var(--sans); font-stretch: 104%; text-decoration: none; border: 1px solid transparent; cursor: pointer; white-space: nowrap; transition: transform .16s var(--ease-out), background-color .18s, border-color .18s, color .18s; }
+.btn:active { transform: translateY(1px) scale(.97); }
+.btn-primary { background: var(--action); color: var(--on-action); }
+.btn-quiet { background: transparent; color: var(--ink); border-color: var(--edge); }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary:hover { background: color-mix(in srgb, var(--action) 84%, var(--ink)); }
+  .btn-quiet:hover { border-color: var(--ink-2); }
+}
+.btn svg { width: 18px; height: 18px; flex: none; }
+.store { display: inline-block; border-radius: var(--r-2); transition: transform .16s var(--ease-out); }
+.store img { height: 52px; width: auto; }
+.store:active { transform: translateY(1px) scale(.97); }
+.cta-note { color: var(--ink-2); font-size: 15px; }
+.cta-note b { color: var(--ink); font-weight: 600; }
+
+/* ---------- header: the one block for the nav at every width ----------
+   It carries the hero's night values while it sits over the hero, then the page theme.
+   Phones (up to 900 px): the main nav folds into the menu and takes no gap, so the wordmark, "Try a question"
+   (spec 8a: at every width) and the menu button keep 12 px between them and stay inside the wrap down to 320 px. */
+.nav { position: fixed; inset: 0 0 auto; z-index: 30; transition: background-color .3s, border-color .3s; border-bottom: 1px solid transparent; color: var(--ink); }
+/* over the light reveal the header takes the light values (home.js sets data-theme on it) */
+.nav[data-theme="light"] { color: var(--ink); }
+.nav.solid, .nav.open { background: color-mix(in srgb, var(--ground) 86%, transparent); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); border-color: var(--line); }
+.nav .bar { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); gap: 16px; }
+.nav .wordmark { font-size: 21px; }
+.nav ul { display: flex; align-items: center; gap: 26px; list-style: none; margin: 0; padding: 0; }
+.nav ul a { position: relative; color: var(--ink-2); text-decoration: none; white-space: nowrap; font-size: 15px; padding: 12px 0; transition: color .2s; }
+.nav ul a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: 0 50%; transition: transform .25s var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .nav ul a:hover { color: var(--ink); } .nav ul a:hover::after { transform: scaleX(1); } }
+.nav .end { display: flex; gap: 14px; align-items: center; }
+.nav .btn { min-height: 44px; padding: 0 16px; font-size: 15px; }
+.nav .try-btn { display: inline-flex; }
+/* "My question bank" (owner, 2026-11-19): a tab with a person glyph; "Soon" and not a link until the web version opens.
+   It lives in the menu list, so the phone menu carries it as its own row with one line under it. */
+.nav ul .qb-li { display: flex; align-items: center; }
+.qb { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px 0 10px; border-radius: var(--r-2); border: 1px solid var(--line); color: var(--ink-2); font-size: 15px; font-weight: 560; text-decoration: none; white-space: nowrap; }
+.qb svg { width: 18px; height: 18px; flex: none; }
+.qb[aria-disabled="true"] { cursor: default; }
+.nav ul a.qb { color: var(--ink); border-color: var(--edge); padding: 0 12px 0 10px; transition: border-color .18s, transform .16s var(--ease-out); }
+.nav ul a.qb::after { display: none; }
+a.qb:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .nav ul a.qb:hover { border-color: var(--ink-2); } }
+.nav .soon { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: var(--r-1); border: 1px solid var(--line); font: 600 11px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); font-stretch: 110%; }
+.menu-note { display: none; }
+.menu-btn { display: none; width: 44px; padding: 0 !important; }
+.menu-btn .i-close, .nav.open .menu-btn .i-open { display: none; }
+.nav.open .menu-btn .i-close { display: block; }
+@media (max-width: 1060px) { /* the main links and the tab need about 1 000 px; below that they fold into the menu */
+  .nav .bar { gap: 0; }
+  .nav .wordmark { margin-right: 12px; }
+  .nav .end { margin-left: auto; gap: 12px; }
+  .nav ul { display: none; }
+  .menu-btn { display: inline-flex; }
+  .nav.open ul { display: grid; position: absolute; left: 0; right: 0; top: var(--nav-h); gap: 0; padding: 8px var(--gutter) 20px; background: var(--ground); border-bottom: 1px solid var(--line); }
+  .nav.open ul a { display: block; font-size: 19px; color: var(--ink); padding: 14px 0; border-top: 1px solid var(--line); }
+  .nav.open ul .qb-li { display: block; padding-top: 16px; border-top: 1px solid var(--line); }
+  .nav.open ul .qb { display: flex; width: 100%; height: 52px; font-size: 17px; border-top-width: 1px; }
+  .nav.open ul a.qb { padding: 0 14px 0 12px; }
+  .nav.open ul .qb .soon { margin-left: auto; }
+  .nav.open .menu-note { display: block; color: var(--ink-2); font-size: 14px; padding-top: 10px; }
+}
+@media (max-width: 520px) { .nav .wordmark { font-size: 16px; } .nav .btn { padding: 0 10px; } }
+@media (max-width: 420px) { .nav .btn { font-size: 14px; } }
+@media (max-width: 359px) { .nav .wordmark .pro { display: none; } }
+@media (max-width: 319px) { .nav .try-btn { display: none; } }
+html:not(.js) .nav { position: absolute; }
+html:not(.js) .menu-btn { display: none; } /* without script the menu cannot open: no dead control; the page itself is the way down */
+.menu-get { display: none; }
+@media (max-width: 1060px) { .nav.open ul .menu-get { display: block; padding: 12px 0 8px; } .nav.open ul .menu-get .btn { display: flex; width: 100%; padding: 0 16px; color: var(--primary-ink, #fff); } }
+/* ---------- footer ---------- */
+footer { border-top: 1px solid var(--line); padding: 48px 0 40px; color: var(--ink-2); font-size: 14px; }
+footer .wrap { display: grid; gap: 18px; }
+footer .top { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+footer .wordmark { font-size: 19px; }
+footer nav { display: flex; gap: 8px 24px; flex-wrap: wrap; }
+footer nav a { color: var(--ink); text-decoration: none; padding: 12px 0; }
+@media (hover: hover) and (pointer: fine) { footer nav a:hover { text-decoration: underline; } }
+footer p { max-width: 70em; }
+.soon-line { margin: 0; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--ink-2); font-size: 15px; line-height: 1.3; }
+.soon-line svg { width: 16px; height: 16px; flex: none; }</style>
+    <script type="module" crossorigin src="/quiz/assets/index-B_tuILJf.js"></script>
+    <link rel="stylesheet" crossorigin href="/quiz/assets/index-DvLEQd_J.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav navy" id="nav">
+  <div class="wrap bar">
+    <a class="wordmark" href="/#top" aria-label="Sidestick PRO, home"><svg class="mk" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4"><path d="M3 14h24l8 10-8 10H3z"/><path d="M35 24h11"/></g><path fill="currentColor" d="M9 21h12v6H9z"/></svg><span class="word">Sidestick</span><span class="pro">PRO</span></a>
+    <nav aria-label="Main"><ul id="menu">
+      <li><a href="/#how">How it works</a></li>
+      
+      <li><a href="/#topics">Topics</a></li>
+      <li><a href="/#plans">Plans</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li class="qb-li"><span class="qb" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.6 3.7-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg>My question bank <span class="soon">Soon</span></span></li>
+      <li class="menu-note">Coming soon to iPhone, iPad and your browser.</li>
+    </ul></nav>
+    <div class="end">
+      <a class="btn btn-quiet try-btn" href="/#try">Try a question</a>
+      
+      <button class="btn btn-quiet menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path class="i-open" d="M4 6.5h16M4 12h16M4 17.5h16"/><path class="i-close" d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+  </div>
+</header>
+    <div id="quiz"></div>
+    <footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="wordmark" href="/" aria-label="Sidestick PRO, back to top"><svg class="mk" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4"><path d="M3 14h24l8 10-8 10H3z"/><path d="M35 24h11"/></g><path fill="currentColor" d="M9 21h12v6H9z"/></svg><span class="word">Sidestick</span><span class="pro">PRO</span></a>
+      <nav aria-label="Footer">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+    <p>Sidestick PRO is a product of MB EPINI (company code 307536669). Support: <a href="mailto:support@sidestick.pro">support@sidestick.pro</a>.</p>
+    <p>Not affiliated with or endorsed by Airbus. Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+  </div>
+</footer>
+  </body>
+</html>
