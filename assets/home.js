@@ -174,11 +174,11 @@ if ('IntersectionObserver' in window && devs) {
 const io2 = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; io2.disconnect(); if (dlink) dlink.style.setProperty('--len', dlink.offsetWidth + 'px'); devs.classList.add('in'); }), { threshold: .4 });
 io2.observe(devs);
 } else if (devs) devs.classList.add('in');
-const picks = $$('.picks .pick'), ring = $('.picks .ring'), cn = $('.chosen .cn'), cn2 = $('.chosen .cn2');
+const picks = $$('.picks .pick'), ring = $('.picks .ring'), cn = $('.chosen .cn'), cn2 = $('.chosen .cn2'), sub = $('.chosen a.sub');
 let curPick = picks.find(p => p.getAttribute('aria-checked') === 'true');
 const evenPicks = () => { picks.forEach(p => { p.style.minHeight = ''; }); const h = Math.max(...picks.map(p => p.offsetHeight)); picks.forEach(p => { p.style.minHeight = h + 'px'; }); };
 const placeRing = () => { if (!curPick) return; ring.style.transform = `translateY(${curPick.offsetTop}px)`; ring.style.height = curPick.offsetHeight + 'px'; };
-const choose = p => { curPick = p; picks.forEach(x => { x.setAttribute('aria-checked', x === p); x.tabIndex = x === p ? 0 : -1; }); placeRing(); cn.textContent = `${p.dataset.name}, ${p.dataset.price}`; if (cn2) cn2.textContent = p.dataset.name; };
+const choose = p => { curPick = p; picks.forEach(x => { x.setAttribute('aria-checked', x === p); x.tabIndex = x === p ? 0 : -1; }); placeRing(); cn.textContent = `${p.dataset.name}, ${p.dataset.price}`; if (cn2) cn2.textContent = p.dataset.name; if (sub) sub.href = sub.getAttribute('href').replace(/plan=\w+$/, `plan=${p.dataset.m}m`); };
 picks.forEach((p, i) => {
 p.tabIndex = p === curPick ? 0 : -1;
 p.addEventListener('click', () => choose(p));

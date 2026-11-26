@@ -478,7 +478,7 @@
     "ZFW" : "Zero fuel weight",
     "ZFWCG" : "Zero fuel weight center of gravity field"
   },
-  "contentVersion" : "2026.11.23-82d519d9",
+  "contentVersion" : "2026.11.26-41541b5f",
   "diagrams" : {
     "air-conditioning-cond" : {
       "footnote" : "Laid out like the ECAM COND page: three zones, each with its own trim air valve. Hot air, tapped between the pack flow valves and the packs, goes through the hot air valve, then through one trim air valve per zone, which adds as much as that zone needs for its selected temperature.",
@@ -4039,7 +4039,7 @@
       ],
       "difficulty" : 1,
       "explanation" : {
-        "confuseWith" : "The FMA is on the PFD and shows modes; the FCU on the glareshield is where the crew selects them.",
+        "confuseWith" : "The FMA is on the PFD and shows modes; the FCU on the glareshield is where you select them.",
         "images" : [
 
         ],
@@ -4047,7 +4047,7 @@
           "FCOM-GEN",
           "FCOM-DSC-22_30-80-20"
         ],
-        "text" : "Flight Mode Annunciator, the strip of five columns at the top of the PFD. It shows the autothrust mode, the vertical and lateral modes engaged and armed, the approach capability, and in the last column whether the AP, FD and A/THR are engaged. A mode change shows there first, so reading it aloud is how the crew confirms what the automation is really doing."
+        "text" : "Flight Mode Annunciator, the strip of five columns at the top of the PFD. It shows the autothrust mode, the vertical and lateral modes engaged and armed, the approach capability, and in the last column whether the AP, FD and A/THR are engaged. A mode change shows there first, so reading it aloud is how you confirm what the automation is really doing."
       },
       "id" : "abbreviations-0024",
       "options" : [
@@ -4168,7 +4168,7 @@
           "FCOM-PRO-ABN-HYD",
           "FCTM-PR-AEP-HYD"
         ],
-        "text" : "Maximum pitch 15°, with the thrust levers at TOGA and then MCT. The stabiliser is lost in this failure, so pitch is controlled by the elevators alone, and after the gravity gear extension the aircraft is in direct law without auto trim. The same STATUS page also asks the crew to manoeuvre with care and limits the speed to 320 kt or M 0.77. The thrust line is not shown when one engine is inoperative."
+        "text" : "Maximum pitch 15°, with the thrust levers at TOGA and then MCT. The stabiliser is lost in this failure, so pitch is controlled by the elevators alone, and after the gravity gear extension the aircraft is in direct law without auto trim. The same STATUS page also asks you to manoeuvre with care and limits the speed to 320 kt or M 0.77. The thrust line is not shown when one engine is inoperative."
       },
       "id" : "abnormal-procedures-0004",
       "options" : [
@@ -4223,7 +4223,7 @@
         "references" : [
           "FCTM-AOP-30-30"
         ],
-        "text" : "For take-off and go-around, the FCTM delays READ & DO actions until at least 400 ft AGL, which balances time to stabilise the aircraft against waiting too long. A safe flight path is the first priority, so the crew may start below 400 ft once the flight path is safe. Memory items are different: they are applied at once from memory in time-critical situations."
+        "text" : "For take-off and go-around, the FCTM delays READ & DO actions until at least 400 ft AGL, which balances time to stabilise the aircraft against waiting too long. A safe flight path is the first priority, so you may start below 400 ft once the flight path is safe. Memory items are different: you apply them at once from memory in time-critical situations."
       },
       "id" : "abnormal-procedures-0017",
       "options" : [
@@ -4249,7 +4249,7 @@
         "set" : "pilot-ideas"
       },
       "status" : "verified",
-      "stem" : "A failure occurs shortly after lift-off. When should the crew start the READ & DO actions of the ECAM?",
+      "stem" : "A failure occurs shortly after lift-off. When should you start the READ & DO actions of the ECAM?",
       "topics" : [
         "abnormal-procedures",
         "standard-procedures"
@@ -4262,7 +4262,7 @@
           "FCTM-AOP-30-30 p.77"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -4278,7 +4278,7 @@
           "FCOM-PRO-ABN-ENG",
           "FCOM-DSC-32-30-10"
         ],
-        "text" : "Green and yellow are not pressurised without engines, and the RAT feeds only blue, which has no brakes. What is left is the brake accumulator on the yellow side. Anti-skid and nosewheel steering are inoperative, so brake pressure is limited to 1 000 PSI to reduce the risk of a locked wheel and a burst tyre, and the stored energy gives at least seven full applications. Reversers are not available either, so the stop depends on careful pedal braking."
+        "text" : "Green and yellow are not pressurised without engines, and the RAT feeds only blue, which has no brakes. What is left is the brake accumulator on the yellow side. Anti-skid and nosewheel steering are inoperative, so you limit brake pressure to 1 000 PSI to reduce the risk of a locked wheel and a burst tyre, and the stored energy gives at least seven full applications. Reversers are not available either, so the stop depends on careful pedal braking."
       },
       "id" : "abnormal-procedures-0029",
       "options" : [
@@ -4329,7 +4329,7 @@
       ],
       "difficulty" : 2,
       "explanation" : {
-        "confuseWith" : "At this step one ADR stays on and two are switched off, so the flight laws cannot use two wrong ADRs that agree.",
+        "confuseWith" : "At this step you keep one ADR on and switch two off, so the flight laws cannot use two wrong ADRs that agree.",
         "images" : [
 
         ],
@@ -4337,7 +4337,7 @@
           "FCOM-PRO-ABN-NAV",
           "FCTM-PR-AEP-NAV"
         ],
-        "text" : "When no ADR can be trusted, the barometric altitude may be wrong as well, and the transponder would keep sending it to ATC and to the TCAS of other aircraft. The procedure therefore switches altitude reporting off once the ADR selection is done, and the crew tells ATC about the situation without delay. The flight then continues on the pitch/thrust tables, or on the backup speed scale where the aircraft has one."
+        "text" : "When no ADR can be trusted, the barometric altitude may be wrong as well, and the transponder would keep sending it to ATC and to the TCAS of other aircraft. You therefore switch altitude reporting off once the ADR selection is done, and tell ATC about the situation without delay. You then fly on the pitch/thrust tables, or on the backup speed scale where the aircraft has one."
       },
       "id" : "abnormal-procedures-0307",
       "options" : [
@@ -4355,7 +4355,7 @@
         "set" : "trn-presentations"
       },
       "status" : "verified",
-      "stem" : "UNRELIABLE SPEED INDICATION: the affected ADRs cannot be identified. The procedure asks the crew to set ATC/XPDR ALT RPTG to OFF. True or false?",
+      "stem" : "UNRELIABLE SPEED INDICATION: the affected ADRs cannot be identified. The procedure asks you to set ATC/XPDR ALT RPTG to OFF. True or false?",
       "topics" : [
         "abnormal-procedures",
         "navigation"
@@ -4371,7 +4371,7 @@
           "FCTM-PR-AEP-NAV p.488"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -4379,14 +4379,14 @@
       ],
       "difficulty" : 2,
       "explanation" : {
-        "confuseWith" : "Clearing the ECAM procedure early is what lets a lower-priority alert take the crew's attention.",
+        "confuseWith" : "Clearing the ECAM procedure early is what lets a lower-priority alert take your attention.",
         "images" : [
 
         ],
         "references" : [
           "FCTM-AOP-30-30"
         ],
-        "text" : "When the ECAM sends the crew to the QRH, the ECAM procedure stays on the display while the QRH procedure is applied. If it were cleared, the next alert in the queue, of lower priority, would appear and could pull the crew's attention away from the procedure in progress. Once the QRH procedure is done, the crew returns to the ECAM and goes on as usual."
+        "text" : "When the ECAM sends you to the QRH, the ECAM procedure stays on the display while you apply the QRH procedure. If it were cleared, the next alert in the queue, of lower priority, would appear and could pull your attention away from the procedure in progress. Once the QRH procedure is done, you return to the ECAM and go on as usual."
       },
       "id" : "abnormal-procedures-0319",
       "options" : [
@@ -4412,7 +4412,7 @@
         "set" : "trn-presentations"
       },
       "status" : "verified",
-      "stem" : "An ECAM procedure asks the crew to apply a QRH procedure. What should be done with the ECAM procedure meanwhile?",
+      "stem" : "An ECAM procedure asks you to apply a QRH procedure. What do you do with the ECAM procedure meanwhile?",
       "topics" : [
         "abnormal-procedures"
       ],
@@ -4424,7 +4424,7 @@
           "FCTM-AOP-30-30 p.78"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -4439,7 +4439,7 @@
         "references" : [
           "FCOM-PRO-ABN-LG"
         ],
-        "text" : "An aft CG helps keep the nose off the runway after touchdown, so the crew can lower it gently before elevator control is lost. The QRH gives the effect of moving passengers: ten passengers from the front to the rear move the CG roughly 4 % aft, and ten from the middle to the rear about 2.5 %. After touchdown the nose is held up with the elevator and the brakes are applied smoothly."
+        "text" : "An aft CG helps keep the nose off the runway after touchdown, so you can lower it gently before elevator control is lost. The QRH gives the effect of moving passengers: ten passengers from the front to the rear move the CG roughly 4 % aft, and ten from the middle to the rear about 2.5 %. After touchdown you hold the nose up with the elevator and apply the brakes smoothly."
       },
       "id" : "abnormal-procedures-0332",
       "options" : [
@@ -4465,7 +4465,7 @@
         "set" : "trn-presentations"
       },
       "status" : "verified",
-      "stem" : "LANDING WITH ABNORMAL L/G with the nose gear abnormal. The procedure asks to shift the CG aft. About how far aft does moving 10 passengers from the front to the rear move it?",
+      "stem" : "LANDING WITH ABNORMAL L/G with the nose gear abnormal. The procedure asks to shift the CG aft. You move 10 passengers from the front to the rear. About how far aft does the CG move?",
       "topics" : [
         "abnormal-procedures",
         "landing-gear"
@@ -4479,7 +4479,7 @@
           "FCOM-PRO-ABN-LG p.4104"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -4549,7 +4549,7 @@
         "references" : [
           "FCTM-PR-AEP-MISC"
         ],
-        "text" : "Yes. The FCTM keeps the TCAS in TA/RA during an emergency descent, because that mode gives the most protection against collision, and avoiding a collision comes first even if the descent must stop for a while. After the RA the descent is resumed. Below FL 100 the crew then limits the rate of descent to about 1 000 ft/min, except in the approach phase."
+        "text" : "Yes. The FCTM keeps the TCAS in TA/RA during an emergency descent, because that mode gives the most protection against collision, and avoiding a collision comes first even if the descent must stop for a while. After the RA you resume the descent. Below FL 100 you then limit the rate of descent to about 1 000 ft/min, except in the approach phase."
       },
       "id" : "abnormal-procedures-0505",
       "options" : [
@@ -4567,7 +4567,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "During an EMER DESCENT the TCAS gives an RA that interrupts the descent. Should the crew follow it?",
+      "stem" : "During an EMER DESCENT the TCAS gives an RA that interrupts the descent. Should you follow it?",
       "topics" : [
         "abnormal-procedures",
         "navigation"
@@ -4581,7 +4581,7 @@
           "FCTM-PR-AEP-MISC p.456"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -4589,14 +4589,14 @@
       ],
       "difficulty" : 3,
       "explanation" : {
-        "confuseWith" : "One pack OFF is the first step; above 9 PSI both packs go OFF and the crew lands as soon as possible.",
+        "confuseWith" : "One pack OFF is only the first step; above 9 PSI you set both packs OFF and land as soon as possible.",
         "images" : [
 
         ],
         "references" : [
           "FCOM-PRO-ABN-CAB_PR"
         ],
-        "text" : "With a total loss of pressure control causing overpressure, the crew first sets one pack OFF and both ventilation BLOWER and EXTRACT to OVRD, so that cabin air goes overboard, and watches ΔP. If ΔP still exceeds 9 PSI, both packs go OFF and the aircraft lands as soon as possible. 10 min before landing both packs are OFF, and before a door is opened ΔP is checked at zero."
+        "text" : "If ΔP stays above 9 PSI, you set both packs OFF and land as soon as possible. Pressure control is lost and the cabin is overpressurised, so you first set one pack OFF and BLOWER and EXTRACT to OVRD to send cabin air overboard, and watch ΔP. 10 min before landing both packs must be OFF, and before you open a door you check that ΔP is zero."
       },
       "id" : "abnormal-procedures-0517",
       "options" : [
@@ -4622,7 +4622,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "[QRH] CABIN OVERPRESSURE: one pack is already OFF with the ventilation at OVRD, and ΔP is still above 9 PSI. What does the procedure ask?",
+      "stem" : "[QRH] CABIN OVERPRESSURE. One pack is OFF, ventilation is at OVRD, and ΔP is still above 9 PSI. What do you do?",
       "topics" : [
         "abnormal-procedures",
         "air-conditioning"
@@ -4636,7 +4636,7 @@
           "FCOM-LIM-AIR p.5007"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -4644,7 +4644,7 @@
       ],
       "difficulty" : 3,
       "explanation" : {
-        "confuseWith" : "CONF FULL is avoided because it would make the jammed-stabiliser aircraft harder to handle.",
+        "confuseWith" : "You avoid CONF FULL because it would make the jammed-stabiliser aircraft harder to handle.",
         "images" : [
 
         ],
@@ -4652,7 +4652,7 @@
           "FCOM-PRO-ABN-F_CTL",
           "FCOM-DSC-34-SURV-40-40"
         ],
-        "text" : "Without manual trim, CONF FULL is not selected, because it would degrade the handling qualities; the landing is made with the flap lever at 3, with GPWS LDG FLAP 3 set ON to avoid a nuisance TOO LOW FLAPS alert. The approach capability is CAT 1 only. If manual trim is available, the crew instead trims to keep the elevator at its neutral position on the F/CTL SD page."
+        "text" : "Without manual trim, you do not select CONF FULL, because it would degrade the handling qualities; you land with the flap lever at 3 and set GPWS LDG FLAP 3 ON to avoid a nuisance TOO LOW FLAPS alert. The approach capability is CAT 1 only. If manual trim is available, you trim instead to keep the elevator at its neutral position on the F/CTL SD page."
       },
       "id" : "abnormal-procedures-0530",
       "options" : [
@@ -4708,7 +4708,7 @@
           "FCOM-PRO-ABN-MISC",
           "FCOM-LIM-AG-SPD"
         ],
-        "text" : "If visibility is not enough for the approach, the crew first considers an autoland. Without it, the cabin pressure mode goes to MAN with the V/S control full up, the speed is kept at or below 200 kt and the PF opens the sliding window to look out. 200 kt is the cockpit window open limit. With the higher noise, the crew watches visual warnings closely."
+        "text" : "If visibility is not enough for the approach, you first consider an autoland. Without it, you set the cabin pressure mode to MAN with the V/S control full up and keep the speed at or below 200 kt, and the PF opens the sliding window to look out. 200 kt is the cockpit window open limit. With the higher noise, you watch visual warnings closely."
       },
       "id" : "abnormal-procedures-0543",
       "options" : [
@@ -4764,7 +4764,7 @@
         "references" : [
           "FCTM-PR-AEP-MISC"
         ],
-        "text" : "Below FL 100 the FCTM recommends a gentler descent of about 1 000 ft/min, the approach phase being the exception. During the whole descent the TCAS stays at TA/RA, since avoiding a collision comes first. Once the oxygen masks are taken off, the crew closes the mask stowage and presses the PRESS TO RESET slide to stop the oxygen and the mask microphone."
+        "text" : "Below FL 100 the FCTM recommends a gentler descent of about 1 000 ft/min, the approach phase being the exception. During the whole descent the TCAS stays at TA/RA, since avoiding a collision comes first. Once you take the oxygen masks off, you close the mask stowage and press the PRESS TO RESET slide to stop the oxygen and the mask microphone."
       },
       "id" : "abnormal-procedures-0555",
       "options" : [
@@ -4818,7 +4818,7 @@
           "QRH-02-01A",
           "FCTM-AOP-30-30"
         ],
-        "text" : "No reset is authorised. When several failures concern the same system, one forbidden reset is enough to forbid them all. When a reset is allowed, the crew applies one at a time, with the specific procedure of the table or the standard reset procedure, and never from memory. On the ground, by contrast, a system that the table does not list may also be reset."
+        "text" : "No reset is authorised. When several failures concern the same system, one forbidden reset is enough to forbid them all. When a reset is allowed, you apply one at a time, with the specific procedure of the table or the standard reset procedure, and never from memory. On the ground, by contrast, you may also reset a system that the table does not list."
       },
       "id" : "abnormal-procedures-1505",
       "options" : [
@@ -4873,7 +4873,7 @@
           "FCTM-PR-AEP-ELEC",
           "FCTM-AOP-30-10"
         ],
-        "text" : "Red LAND ASAP asks for a landing as soon as possible at the closest airport that allows a safe landing. For ELEC EMER CONFIG the FCTM adds that flying an approach to a badly equipped field with marginal weather would not be wise, while a long flight in this configuration is not recommended either. The flight is hand-flown, in alternate law and then direct law with the gear down, and the workload is high."
+        "text" : "Red LAND ASAP asks for a landing as soon as possible at the closest airport that allows a safe landing. For ELEC EMER CONFIG the FCTM adds that flying an approach to a badly equipped field with marginal weather would not be wise, while a long flight in this configuration is not recommended either. You fly by hand, in alternate law and then direct law with the gear down, and the workload is high."
       },
       "id" : "abnormal-procedures-1519",
       "options" : [
@@ -4928,7 +4928,7 @@
         "references" : [
           "FCOM-PRO-ABN-MISC"
         ],
-        "text" : "CONF 1+F. When an overweight landing is made in a configuration other than FULL, the procedure asks for CONF 1+F in a go-around. For the approach, packs 1 and 2 are set OFF or supplied by the APU, which raises the maximum thrust the engines can give if a go-around is needed. FULL is the normal landing setting, unless a procedure or the landing performance limits it."
+        "text" : "CONF 1+F. When you make an overweight landing in a configuration other than FULL, the procedure asks for CONF 1+F in a go-around. For the approach, you set packs 1 and 2 OFF or supply them from the APU, which raises the maximum thrust the engines can give if a go-around is needed. FULL is the normal landing setting, unless a procedure or the landing performance limits it."
       },
       "id" : "abnormal-procedures-1004",
       "options" : [
@@ -5101,7 +5101,7 @@
           "FCOM-LIM-AIR",
           "FCOM-DSC-21-10-20"
         ],
-        "text" : "No: the crew must never run the packs while a low-pressure air conditioning unit is also supplying air. The limitation exists to protect the air conditioning system. Both sources feed the same mixing unit, which has low-pressure ground inlets of its own. The rule has no exception for hot airfields, outside temperature or ground cart flow."
+        "text" : "No: you must never run the packs while a low-pressure air conditioning unit is also supplying air. The limitation exists to protect the air conditioning system. Both sources feed the same mixing unit, which has low-pressure ground inlets of its own. The rule has no exception for hot airfields, outside temperature or ground cart flow."
       },
       "id" : "air-conditioning-0018",
       "options" : [
@@ -5128,7 +5128,7 @@
         "set" : "technical-questions"
       },
       "status" : "verified",
-      "stem" : "It is permissible to use simultaneously packs and LP ground unit during long stops in a hot airfield",
+      "stem" : "During a long stop at a hot airfield, may the packs and an LP ground unit be used at the same time?",
       "topics" : [
         "air-conditioning"
       ],
@@ -5142,7 +5142,7 @@
           "FCOM-DSC-21-10-20 p.220"
         ]
       },
-      "version" : 2
+      "version" : 3
     },
     {
       "correct" : [
@@ -5216,7 +5216,7 @@
           "FCOM-DSC-21-10-30",
           "FCOM-PRO-NOR-SOP-06"
         ],
-        "text" : "Because the APU is the only bleed source: whenever the APU supplies the bleed air, HI flow is selected automatically, whatever the PACK FLOW selector shows. The same applies in single-pack operation. The crew's LO, NORM or HI choice only counts with both packs running on engine bleed air. Even then, a LO selection is raised to normal flow automatically if the temperature demand cannot be met."
+        "text" : "Because the APU is the only bleed source: whenever the APU supplies the bleed air, HI flow is selected automatically, whatever the PACK FLOW selector shows. The same applies in single-pack operation. Your LO, NORM or HI choice only counts with both packs running on engine bleed air. Even then, a LO selection is raised to normal flow automatically if the temperature demand cannot be met."
       },
       "id" : "air-conditioning-0045",
       "options" : [
@@ -5323,7 +5323,7 @@
           "FCOM-DSC-21-20-10",
           "FCOM-DSC-21-20-30"
         ],
-        "text" : "One of three electric motors: the outflow valve actuator holds three independent motors, two for automatic operation and one for manual operation, and any one of them can drive the valve. Normally the active cabin pressure controller works the valve through its own automatic motor. When the crew selects MAN, power to the automatic motors is cut and the manual motor takes over."
+        "text" : "One of three electric motors: the outflow valve actuator holds three independent motors, two for automatic operation and one for manual operation, and any one of them can drive the valve. Normally the active cabin pressure controller works the valve through its own automatic motor. When you select MAN, power to the automatic motors is cut and the manual motor takes over."
       },
       "id" : "air-conditioning-0074",
       "options" : [
@@ -5497,7 +5497,7 @@
           "FCOM-PRO-ABN-CAB_PR",
           "FCOM-DSC-52-70"
         ],
-        "text" : "The alert comes on the ground when the outflow valve has not fully opened within its 70 s delay. The crew first drives the valve open in manual mode, allowing about 5 s to see it move. If that fails, both packs are switched off. Before the cabin crew opens a door, the flight crew must confirm that no residual pressure difference is left."
+        "text" : "The alert comes on the ground when the outflow valve has not fully opened within its 70 s delay. You first drive the valve open in manual mode, allowing about 5 s to see it move. If that fails, you switch both packs off. Before the cabin crew opens a door, you must confirm that no residual pressure difference is left."
       },
       "id" : "air-conditioning-0703",
       "options" : [
@@ -5523,7 +5523,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "CAB PR OFV NOT OPEN on the ground. MODE SEL MAN and MAN V/S CTL FULL UP have not opened the outflow valve. What next?",
+      "stem" : "CAB PR OFV NOT OPEN on the ground. MODE SEL MAN and MAN V/S CTL FULL UP have not opened the outflow valve. What do you do next?",
       "topics" : [
         "air-conditioning",
         "abnormal-procedures"
@@ -5538,7 +5538,7 @@
           "FCOM-DSC-21-10-20 p.220"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -5554,7 +5554,7 @@
           "FCOM-DSC-21-10-20",
           "FCOM-DSC-21-10-50"
         ],
-        "text" : "No air flows yet. The door of the emergency ram air inlet opens when the pb is pressed, but a check valve behind it stays closed while the cabin pressure is more than 1 PSI above the outside pressure. Below 1 PSI, with the pressure in automatic mode, the outflow valve opens to about half, and outside air then flows into the mixer unit."
+        "text" : "No air flows yet. The door of the emergency ram air inlet opens when you press the pb, but a check valve behind it stays closed while the cabin pressure is more than 1 PSI above the outside pressure. Below 1 PSI, with the pressure in automatic mode, the outflow valve opens to about half, and outside air then flows into the mixer unit."
       },
       "id" : "air-conditioning-1008",
       "options" : [
@@ -5608,7 +5608,7 @@
         "references" : [
           "FCOM-DSC-21-20-30"
         ],
-        "text" : "The controller lets the remaining pressure out gradually, with the cabin climbing at 500 ft/min. Only 55 s after landing does the ground function open the outflow valve fully, which makes sure no pressure is left before the doors are opened. In manual mode none of this happens: the outflow valve does not open by itself at touchdown, so the crew controls it."
+        "text" : "The controller lets it out gradually, with the cabin climbing at 500 ft/min. The ground function opens the outflow valve fully only 55 s after landing, so no pressure is left when the doors are opened. In manual mode the outflow valve does not open by itself at touchdown, so you control it yourself."
       },
       "id" : "air-conditioning-1021",
       "options" : [
@@ -5634,7 +5634,7 @@
         "set" : "claude-variant"
       },
       "status" : "verified",
-      "stem" : "In automatic mode, how is the cabin pressure that remains at touchdown released?",
+      "stem" : "Some cabin pressure is left at touchdown. In automatic mode, how is it released?",
       "topics" : [
         "air-conditioning"
       ],
@@ -5649,7 +5649,7 @@
           "FCOM-DSC-21-20-10 p.249"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -5691,7 +5691,7 @@
         "set" : "claude-variant"
       },
       "status" : "verified",
-      "stem" : "Avionics smoke: the BLOWER and EXTRACT pbs are both set to OVRD. Where does the cooling air come from, and where does it go?",
+      "stem" : "Avionics smoke. You set both the BLOWER and EXTRACT pbs to OVRD. Where does the cooling air come from, and where does it go?",
       "topics" : [
         "air-conditioning",
         "abnormal-procedures"
@@ -5706,7 +5706,7 @@
           "FCOM-DSC-21-30-60 p.293"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -5901,7 +5901,7 @@
           "FCOM-PRO-NOR-SOP-04",
           "AFM-NORM-49"
         ],
-        "text" : "Yes, the APU can be started on the ground with the aircraft batteries as the only source. While the MASTER SW is ON and APU speed is below 95 %, the battery charge limiters connect the batteries to the DC BAT bus for the start. The start should be made within about 30 minutes of setting the batteries to AUTO, since after 35 minutes their charge falls below a quarter."
+        "text" : "Yes, the APU can be started on the ground with the aircraft batteries as the only source. While the MASTER SW is ON and APU speed is below 95 %, the battery charge limiters connect the batteries to the DC BAT bus for the start. You should start it within about 30 minutes of setting the batteries to AUTO, since after 35 minutes their charge falls below a quarter."
       },
       "id" : "apu-0029",
       "options" : [
@@ -5952,7 +5952,7 @@
           "FCOM-DSC-49-10-20",
           "FCOM-DSC-49-20"
         ],
-        "text" : "The ECB energises the starter only once the air intake flap is completely open, with MASTER SW and START both ON. Opening the flap is one of the first steps after MASTER SW is pressed, together with the ECB power-up test and the fuel isolation valve. The ignition follows 1.5 s after the starter, not before it. The APU fuel pump runs only when no tank pump is running."
+        "text" : "The ECB energises the starter only once the air intake flap is completely open, with MASTER SW and START both ON. Opening the flap is one of the first steps after you press MASTER SW, together with the ECB power-up test and the fuel isolation valve. The ignition follows 1.5 s after the starter, not before it. The APU fuel pump runs only when no tank pump is running."
       },
       "id" : "apu-1003",
       "options" : [
@@ -6007,7 +6007,7 @@
         "references" : [
           "EU-SERA-8015_e"
         ],
-        "text" : "SSR codes are always read back, because an error in them is dangerous. The same applies to altimeter settings and transition levels; level, heading and speed instructions; new frequencies; route clearances; the runway in use; and any clearance to enter, cross, take off from, land on, taxi or backtrack on, or hold short of a runway. A wrong code would show the controller false identity or emergency data, and the read-back lets the error be caught at once."
+        "text" : "You always read back SSR codes, because an error in them is dangerous. The same applies to altimeter settings and transition levels; level, heading and speed instructions; new frequencies; route clearances; the runway in use; and any clearance to enter, cross, take off from, land on, taxi or backtrack on, or hold short of a runway. A wrong code would show the controller false identity or emergency data, and the read-back lets the error be caught at once."
       },
       "id" : "atc-procedures-0001",
       "options" : [
@@ -6033,7 +6033,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "Under SERA, which of these items must the flight crew always read back?",
+      "stem" : "Under SERA, which of these must you always read back?",
       "topics" : [
         "atc-procedures"
       ],
@@ -6045,7 +6045,7 @@
           "EU-SERA-8015 p.91"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -6060,7 +6060,7 @@
         "references" : [
           "EU-SERA-6001"
         ],
-        "text" : "In Class D both IFR and VFR flights need a clearance and continuous radio, but ATC separates IFR flights only from other IFR flights. For VFR traffic, the IFR crew receives traffic information, and avoidance advice on request. So in Class D the crew of an airliner keeps a visual lookout for VFR traffic, especially below 10 000 ft, where a 250 kt limit applies to all flights."
+        "text" : "In Class D both IFR and VFR flights need a clearance and continuous radio, but ATC separates IFR flights only from other IFR flights. For VFR traffic, you receive traffic information, and avoidance advice on request. So in Class D you keep a visual lookout for VFR traffic, especially below 10 000 ft, where a 250 kt limit applies to all flights."
       },
       "id" : "atc-procedures-0013",
       "options" : [
@@ -6113,7 +6113,7 @@
         "references" : [
           "ICAO-Doc4444-6_3_2_3"
         ],
-        "text" : "No. Under ICAO, a SID or STAR designator on its own does not authorise a climb or descent along the procedure's vertical profile. The crew needs a cleared level. Once a level is given, the SID's published restrictions apply on the way up to it. If the clearance contains no level, the crew asks ATC for one."
+        "text" : "No. Under ICAO, a SID or STAR designator on its own does not authorise a climb or descent along the procedure's vertical profile. You need a cleared level. Once a level is given, the SID's published restrictions apply on the way up to it. If the clearance contains no level, you ask ATC for one."
       },
       "id" : "atc-procedures-0026",
       "options" : [
@@ -6131,7 +6131,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "Under ICAO rules, the departure clearance gives a SID designator but no cleared level. Does it allow the crew to climb along the SID's vertical profile?",
+      "stem" : "Under ICAO rules, the departure clearance gives a SID designator but no cleared level. Does it allow you to climb along the SID's vertical profile?",
       "topics" : [
         "atc-procedures"
       ],
@@ -6144,7 +6144,7 @@
           "ICAO-SIDSTAR-Scenarios p.2"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -6159,7 +6159,7 @@
         "references" : [
           "EU-SERA-11015"
         ],
-        "text" : "Rocking the wings and flashing navigation lights from slightly above and ahead, normally on the left, means \"You have been intercepted. Follow me.\" The intercepted aircraft answers in the same way, rocking and flashing its lights, and follows. The crew also calls on 121.5 MHz and, if possible, tells ATS. An abrupt climbing breakaway turn of 90° or more means \"You may proceed\"."
+        "text" : "Rocking the wings and flashing navigation lights from slightly above and ahead, normally on the left, means \"You have been intercepted. Follow me.\" When you are intercepted, you answer in the same way, rocking the wings and flashing the lights, and follow. You also call on 121.5 MHz and, if possible, tell ATS. An abrupt climbing breakaway turn of 90° or more means \"You may proceed\"."
       },
       "id" : "atc-procedures-0039",
       "options" : [
@@ -6214,7 +6214,7 @@
           "UK-CAP413-2_18",
           "EU-SERA-8015_ea"
         ],
-        "text" : "UNABLE tells ATC the crew cannot do what was asked, instructed or cleared, and is normally followed by the reason, for example performance or weather. Controllers use it too when traffic does not allow a requested change, and may offer an alternative route or level."
+        "text" : "UNABLE tells ATC you cannot do what was asked, instructed or cleared, and is normally followed by the reason, for example performance or weather. Controllers use it too when traffic does not allow a requested change, and may offer an alternative route or level."
       },
       "id" : "atc-procedures-0051",
       "options" : [
@@ -6240,7 +6240,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "A crew cannot comply with an ATC instruction. Which standard word is used, and what normally follows it?",
+      "stem" : "You cannot comply with an ATC instruction. Which standard word do you use, and what normally follows it?",
       "topics" : [
         "atc-procedures"
       ],
@@ -6253,7 +6253,7 @@
           "EU-SERA-8015 p.91"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -6371,14 +6371,14 @@
       ],
       "difficulty" : 3,
       "explanation" : {
-        "confuseWith" : "A dash marks an FD switched off by the crew; the same number on both sides marks a failed FD with the other one serving both PFDs.",
+        "confuseWith" : "A dash marks an FD you have switched off; the same number on both sides marks a failed FD with the other one serving both PFDs.",
         "images" : [
 
         ],
         "references" : [
           "FCOM-DSC-22_30-20-50"
         ],
-        "text" : "The FMA tells a switched-off FD from a failed one. -FD2 means the crew has switched FD1 off: its pushbutton goes off, its bars leave PFD 1, and FD2 stays engaged. 2FD2 means FD1 has failed: the FD pushbuttons stay on and both PFDs show the guidance of the remaining FD2. The same logic applies the other way round, with 1FD- and 1FD1."
+        "text" : "The FMA tells a switched-off FD from a failed one. -FD2 means you have switched FD1 off: its pushbutton goes off, its bars leave PFD 1, and FD2 stays engaged. 2FD2 means FD1 has failed: the FD pushbuttons stay on and both PFDs show the guidance of the remaining FD2. The same logic applies the other way round, with 1FD- and 1FD1."
       },
       "id" : "autoflight-0014",
       "options" : [
@@ -6494,7 +6494,7 @@
           "FCOM-DSC-31-05-50",
           "FCOM-PRO-ABN-EIS"
         ],
-        "text" : "Turning the EIS DMC selector on the switching panel puts DMC 3, the standby unit, in place of the failed one: CAPT 3 replaces DMC 1 and F/O 3 replaces DMC 2. Without it, the PFD and ND of the failed DMC stay lost. The display unit failure procedure asks the crew to consider this DMC switching when a diagonal line appears on a display."
+        "text" : "Turning the EIS DMC selector on the switching panel puts DMC 3, the standby unit, in place of the failed one: CAPT 3 replaces DMC 1 and F/O 3 replaces DMC 2. Without it, the PFD and ND of the failed DMC stay lost. The display unit failure procedure asks you to consider this DMC switching when a diagonal line appears on a display."
       },
       "id" : "autoflight-0041",
       "options" : [
@@ -6579,7 +6579,7 @@
         "set" : "pilot-ideas"
       },
       "status" : "verified",
-      "stem" : "ILS approach set on the ARRIVAL page. When the crew presses APPR, which condition must also be met for LOC and G/S to arm?",
+      "stem" : "ILS approach set on the ARRIVAL page. You press APPR. Which condition must also be met for LOC and G/S to arm?",
       "topics" : [
         "autoflight"
       ],
@@ -6593,7 +6593,7 @@
           "FCOM-DSC-22_30-40-80-20 p.1480"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -6719,7 +6719,7 @@
         "references" : [
           "FCOM-DSC-22_30-50-30"
         ],
-        "text" : "Above the CL detent with both engines, or above FLX-MCT with one engine out, the A/THR goes from active to armed. The engines then follow the levers directly, so thrust increases straight away to match their position, and the FMA shows MAN THR. Bringing the levers back into the active range, at or below CL, makes the A/THR active again."
+        "text" : "When you push the levers above the CL detent with both engines running, or above FLX-MCT with one engine out, the A/THR goes from active to armed. The engines then follow the levers directly, so thrust increases straight away to match their position, and the FMA shows MAN THR. When you bring the levers back to CL or below, the A/THR becomes active again."
       },
       "id" : "autoflight-0702",
       "options" : [
@@ -6745,7 +6745,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "Both engines running, A/THR active in CLB. The crew pushes both thrust levers above the CL detent. What happens?",
+      "stem" : "Both engines running, A/THR active in CLB. You push both thrust levers above the CL detent. What happens?",
       "topics" : [
         "autoflight",
         "engines"
@@ -6759,7 +6759,7 @@
           "FCOM-DSC-22_30-50-30 p.1546"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -6774,7 +6774,7 @@
         "references" : [
           "FCTM-PR-NP-SOP-260"
         ],
-        "text" : "Once the path is safe and the clearance obtained, the crew moves the FMS from the go-around phase toward the diversion. If the alternate route is in the secondary flight plan, it is activated and a DIR TO made as needed, but the ACTIVATE SEC F-PLN prompt is shown only with the AP/FD in HDG. If the alternate was prepared in the active flight plan, the crew uses ENABLE ALTN from a lateral revision at the TO waypoint instead."
+        "text" : "Once the path is safe and the clearance obtained, you move the FMS from the go-around phase toward the diversion. If the alternate route is in the secondary flight plan, you activate it and make a DIR TO as needed, but the ACTIVATE SEC F-PLN prompt is shown only with the AP/FD in HDG. If the alternate was prepared in the active flight plan, you use ENABLE ALTN from a lateral revision at the TO waypoint instead."
       },
       "id" : "autoflight-0715",
       "options" : [
@@ -6800,7 +6800,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "After a go-around the crew diverts. The alternate route is stored in the secondary flight plan. What must the AP/FD lateral mode be for the ACTIVATE SEC F-PLN prompt to appear?",
+      "stem" : "After a go-around you divert, and the alternate route is stored in the secondary flight plan. Which AP/FD lateral mode makes the ACTIVATE SEC F-PLN prompt appear?",
       "topics" : [
         "autoflight",
         "standard-procedures"
@@ -6813,7 +6813,7 @@
           "FCTM-PR-NP-SOP-260 p.335"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -6937,7 +6937,7 @@
         "references" : [
           "FCTM-PR-NP-SP-10-10-1"
         ],
-        "text" : "Add about 160 ft. In cold air the true altitude is lower than the altimeter shows, so minimum altitudes are raised. For a sea-level aerodrome the FCTM gives about 4 × Delta ISA × height ÷ 1 000: 4 × 20 × 2 = 160 ft. The correction grows with the cold and with the height above the aerodrome, and it is applied to the FAF, step-down and missed approach altitudes and the minima."
+        "text" : "Add about 160 ft. In cold air the true altitude is lower than the altimeter shows, so minimum altitudes are raised. For a sea-level aerodrome the FCTM gives about 4 × Delta ISA × height ÷ 1 000: 4 × 20 × 2 = 160 ft. The correction grows with the cold and with the height above the aerodrome, and you apply it to the FAF, step-down and missed approach altitudes and the minima."
       },
       "id" : "aviation-maths-0012",
       "options" : [
@@ -7098,7 +7098,7 @@
         "references" : [
 
         ],
-        "text" : "About 1 300 ft. A 3° path rises about 318 ft for every nautical mile from the threshold, close to 300 ft. At 4 NM that is 4 × 318 ≈ 1 270 ft, so about 1 300 ft. Crews use this to cross-check the approach against the DME or the FMS distance. 900 ft would be the height at about 3 NM."
+        "text" : "About 1 300 ft. A 3° path rises about 318 ft for every nautical mile from the threshold, close to 300 ft. At 4 NM that is 4 × 318 ≈ 1 270 ft, so about 1 300 ft. You use this to cross-check the approach against the DME or the FMS distance. 900 ft would be the height at about 3 NM."
       },
       "id" : "aviation-maths-1016",
       "options" : [
@@ -7152,7 +7152,7 @@
         "references" : [
           "FCOM-DSC-23-10-30"
         ],
-        "text" : "All of the above: the audio management system is how the crew reaches every audio service. Through it the crew transmits and listens on the installed radio communication and navigation equipment, talks on the interphones, uses the call systems and makes passenger announcements. It is built around an AMU with three ACPs, the boomsets, hand microphones, oxygen mask microphones and two cockpit loudspeakers."
+        "text" : "All of the above: the audio management system is how you reach every audio service. Through it you transmit and listen on the installed radio communication and navigation equipment, talk on the interphones, use the call systems and make passenger announcements. It is built around an AMU with three ACPs, the boomsets, hand microphones, oxygen mask microphones and two cockpit loudspeakers."
       },
       "id" : "communications-0001",
       "options" : [
@@ -7306,7 +7306,7 @@
           "FCOM-DSC-23-10-40",
           "FCOM-DSC-32-10-30"
         ],
-        "text" : "5 and 1. On the ground the CVR records for the first 5 minutes after the aircraft electrical network is powered, and it records whenever one engine is running. It goes on in flight and until 5 minutes after the last engine is shut down. Outside these periods on the ground, the crew can start it with the GND CTL pushbutton."
+        "text" : "5 and 1. On the ground the CVR records for the first 5 minutes after the aircraft electrical network is powered, and it records whenever one engine is running. It goes on in flight and until 5 minutes after the last engine is shut down. Outside these periods on the ground, you can start it with the GND CTL pushbutton."
       },
       "id" : "communications-0038",
       "options" : [
@@ -7363,7 +7363,7 @@
           "FCOM-DSC-23-10-50",
           "FCOM-DSC-23-20-30"
         ],
-        "text" : "Pressing the INT transmission key, which carries the MECH light, selects the flight interphone for transmission. The pilot then speaks by pressing a push-to-talk switch, such as the sidestick radio switch, or by setting the INT/RAD switch to RAD. The ground crew hears him through the FLT INT jack on the maintenance panel at the nose landing gear. Calls with the cabin crew go through the CAB key instead."
+        "text" : "Pressing the INT transmission key, which carries the MECH light, selects the flight interphone for transmission. You then speak by pressing a push-to-talk switch, such as the sidestick radio switch, or by setting the INT/RAD switch to RAD. The ground crew hears you through the FLT INT jack on the maintenance panel at the nose landing gear. Calls with the cabin crew go through the CAB key instead."
       },
       "id" : "communications-0050",
       "options" : [
@@ -7421,7 +7421,7 @@
         "references" : [
           "FCOM-DSC-23-10-40"
         ],
-        "text" : "In automatic mode the CVR records on the ground for only the first 5 min after the network is powered, then stops until an engine is started. It then records with an engine running, throughout the flight, and for 5 min after the last engine shutdown. To record at another time on the ground, the crew presses the GND CTL pb on the overhead panel."
+        "text" : "In automatic mode the CVR records on the ground for only the first 5 min after the network is powered, then stops until an engine is started. It then records with an engine running, throughout the flight, and for 5 min after the last engine shutdown. To record at another time on the ground, you press the GND CTL pb on the overhead panel."
       },
       "id" : "communications-1002",
       "options" : [
@@ -7708,7 +7708,7 @@
           "FCOM-PRO-NOR-SOP-04",
           "FCOM-DSC-24-10-20"
         ],
-        "text" : "Both BAT pushbuttons must be checked OFF before the battery voltages are read. The batteries stay permanently connected to their hot buses, so the overhead voltmeters read them with the pushbuttons off. The check is for an aircraft that has had no electrical power for 6 h or more: a voltage above 25.5 V means a charge above 50 %, and the pushbuttons then go to AUTO."
+        "text" : "You check both BAT pushbuttons OFF before you read the battery voltages. The batteries stay permanently connected to their hot buses, so the overhead voltmeters read them with the pushbuttons off. The check is for an aircraft that has had no electrical power for 6 h or more: a voltage above 25.5 V means a charge above 50 %, and you then set the pushbuttons to AUTO."
       },
       "id" : "electrical-0015",
       "options" : [
@@ -7766,7 +7766,7 @@
           "FCOM-PRO-ABN-ELEC",
           "FCTM-PR-AEP-ELEC"
         ],
-        "text" : "Direct law. In the emergency electrical configuration the flight controls are in alternate law without protections, and once the landing gear is extended they change to direct law in pitch and roll. The ECAM status page reminds the crew of this. Autopilot and autothrust are lost, so the approach is flown by hand, at no less than the minimum RAT speed of 140 kt."
+        "text" : "Direct law. In the emergency electrical configuration the flight controls are in alternate law without protections, and once the landing gear is extended they change to direct law in pitch and roll. The ECAM status page reminds you of this. Autopilot and autothrust are lost, so you fly the approach by hand, at no less than the minimum RAT speed of 140 kt."
       },
       "id" : "electrical-0028",
       "options" : [
@@ -7824,7 +7824,7 @@
           "FCOM-DSC-24-20",
           "FCOM-DSC-24-10-30-30"
         ],
-        "text" : "No: once disconnected, an IDG cannot be reconnected by the crew. Pressing the guarded IDG pushbutton separates the drive from its shaft, and only maintenance personnel can reconnect it. The generator on that side stays lost, and the APU generator, if available, or the other engine generator takes over its buses automatically."
+        "text" : "No: once an IDG is disconnected, you cannot reconnect it. Pressing the guarded IDG pushbutton separates the drive from its shaft, and only maintenance personnel can reconnect it. The generator on that side stays lost, and the APU generator, if available, or the other engine generator takes over its buses automatically."
       },
       "id" : "electrical-0046",
       "options" : [
@@ -7940,7 +7940,7 @@
           "FCOM-DSC-24-10-30-30",
           "FCOM-DSC-24-20"
         ],
-        "text" : "AC BUS 2 takes over the AC ESS BUS when AC BUS 1 fails. The crew does it with the AC ESS FEED pushbutton, or it happens by itself on aircraft with automatic AC ESS FEED switching. The ESS TR then supplies the DC ESS BUS, and DC BUS 2 picks up DC BUS 1 and the DC BAT BUS after 5 s. The emergency sources are kept for the loss of both main AC buses."
+        "text" : "AC BUS 2 takes over the AC ESS BUS when AC BUS 1 fails. You do it with the AC ESS FEED pushbutton, or it happens by itself on aircraft with automatic AC ESS FEED switching. The ESS TR then supplies the DC ESS BUS, and DC BUS 2 picks up DC BUS 1 and the DC BAT BUS after 5 s. The emergency sources are kept for the loss of both main AC buses."
       },
       "id" : "electrical-0073",
       "options" : [
@@ -7996,7 +7996,7 @@
         "references" : [
           "FCOM-PRO-ABN-ELEC"
         ],
-        "text" : "Only IR 1 is kept in the emergency electrical configuration. IR 2 and IR 3 keep running for 5 min after the main generators fail and are then lost. If the crew sets the ATT HDG selector to CAPT 3 so that IR 3 replaces IR 1, IR 3 stays supplied. The same applies with the emergency generator running and on batteries only, in flight and on the ground."
+        "text" : "Only IR 1 is kept in the emergency electrical configuration. IR 2 and IR 3 keep running for 5 min after the main generators fail and are then lost. If you set the ATT HDG selector to CAPT 3 so that IR 3 replaces IR 1, IR 3 stays supplied. The same applies with the emergency generator running and on batteries only, in flight and on the ground."
       },
       "id" : "electrical-0105",
       "options" : [
@@ -8052,7 +8052,7 @@
         "references" : [
           "FCOM-PRO-ABN-ELEC"
         ],
-        "text" : "In the emergency electrical configuration the captain's pitot keeps its heat, but the standby probe is not de-iced. In icing the standby probe may ice up and read wrong, so the ECAM tells the crew to disregard the standby airspeed when it disagrees with the CM1 PFD. The CM1 PFD stays available and is fed by ADR 1, the only ADR left in this configuration."
+        "text" : "In the emergency electrical configuration the captain's pitot keeps its heat, but the standby probe is not de-iced. In icing the standby probe may ice up and read wrong, so the ECAM tells you to disregard the standby airspeed when it disagrees with the CM1 PFD. The CM1 PFD stays available and is fed by ADR 1, the only ADR left in this configuration."
       },
       "id" : "electrical-0710",
       "options" : [
@@ -8078,7 +8078,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "ELEC EMER CONFIG in icing conditions. The CM1 PFD and the standby airspeed indicator disagree. Which does the crew believe?",
+      "stem" : "ELEC EMER CONFIG in icing conditions. The CM1 PFD and the standby airspeed indicator disagree. Which do you believe?",
       "topics" : [
         "electrical",
         "navigation",
@@ -8094,7 +8094,7 @@
           "FCOM-PRO-ABN-ELEC p.3592"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -8164,7 +8164,7 @@
         "references" : [
           "FCOM-PRO-ABN-ELEC"
         ],
-        "text" : "The first reset recycles the generators one after the other with the channels still linked. If none comes back, BUS TIE goes OFF, which segregates the two generator channels, so that each generator is tried again on its own channel. When any of these resets works, both FACs are reset. BUS TIE is set back to AUTO later in the procedure, before the APU start."
+        "text" : "The first reset recycles the generators one after the other with the channels still linked. If none comes back, you set BUS TIE OFF, which segregates the two generator channels, so that each generator is tried again on its own channel. When any of these resets works, you reset both FACs. BUS TIE goes back to AUTO later in the procedure, before the APU start."
       },
       "id" : "electrical-1020",
       "options" : [
@@ -8456,7 +8456,7 @@
           "FCOM-PRO-NOR-SUP-ENG",
           "FCOM-DSC-70-90-40"
         ],
-        "text" : "At ENG MASTER ON in a manual start, the FADEC opens the HP fuel valve and powers both igniters, so the crew checks igniters A and B on and the fuel flow rising, and starts the chrono for the light-up. The fuel used indication resets on the ground at the engine start. N2 has already been rising since the start valve opened."
+        "text" : "At ENG MASTER ON in a manual start, the FADEC opens the HP fuel valve and powers both igniters, so you check igniters A and B on and the fuel flow rising, and start the chrono for the light-up. The fuel used indication resets on the ground at the engine start. N2 has already been rising since the start valve opened."
       },
       "id" : "engines-0054",
       "options" : [
@@ -8566,7 +8566,7 @@
         "references" : [
           "FCOM-PRO-ABN-ENG"
         ],
-        "text" : "The procedure starts with a check of the oil pressure on the ENG SD page, because the alert and the indication can come from different sensors. Only if the pressure there is below the limit does the crew set the thrust lever to idle and the master lever OFF. The opposite case, a red pressure on the SD without the alert, points to a faulty transducer, and the engine may keep running."
+        "text" : "The procedure starts with a check of the oil pressure on the ENG SD page, because the alert and the indication can come from different sensors. You set the thrust lever to idle and the master lever OFF only if the pressure there is below the limit. The opposite case, a red pressure on the SD without the alert, points to a faulty transducer, and the engine may keep running."
       },
       "id" : "engines-1508",
       "options" : [
@@ -8648,7 +8648,7 @@
         "set" : "claude-variant"
       },
       "status" : "verified",
-      "stem" : "After an unsuccessful start on the ground, how does the crew select a dry crank of the engine?",
+      "stem" : "After an unsuccessful start on the ground, how do you select a dry crank of the engine?",
       "topics" : [
         "engines",
         "standard-procedures"
@@ -8662,7 +8662,7 @@
           "FCOM-DSC-70-80-40 p.3242"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -8706,7 +8706,7 @@
         "set" : "technical-questions"
       },
       "status" : "verified",
-      "stem" : "You want to open the cabin door, whilst lifting the control handle the white light illuminates. What does it mean?",
+      "stem" : "You want to open the cabin door. As you lift the control handle, the white light comes on. What does it mean?",
       "topics" : [
         "equipment"
       ],
@@ -8720,7 +8720,7 @@
           "FCOM-DSC-52-10-20 p.3101"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -8898,7 +8898,7 @@
           "FCOM-DSC-26-20-20",
           "FCOM-PRO-NOR-SOP-05"
         ],
-        "text" : "A missing red disc means the APU bottle has released its agent overboard through its overpressure relief. The disc sits outside, at the rear of the fuselage, and the walkaround of the APU area checks that it is still in place."
+        "text" : "A missing red disc means the APU bottle has released its agent overboard through its overpressure relief. The disc sits outside, at the rear of the fuselage, and on the walkaround of the APU area you check that it is still in place."
       },
       "id" : "fire-protection-0024",
       "options" : [
@@ -9040,7 +9040,7 @@
         "set" : "pilot-ideas"
       },
       "status" : "verified",
-      "stem" : "Engine tailpipe fire on the ground. Why must the crew not push the ENG FIRE pushbutton?",
+      "stem" : "Engine tailpipe fire on the ground. Why must you not push the ENG FIRE pushbutton?",
       "topics" : [
         "fire-protection",
         "engines",
@@ -9056,7 +9056,7 @@
           "FCTM-PR-AEP-ENG p.426"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -9071,7 +9071,7 @@
         "references" : [
           "FCOM-DSC-26-50-10"
         ],
-        "text" : "Each cavity has two detectors, one on each loop, and the warning normally needs both of them to see smoke. If one detector is inoperative, the other is enough on its own. Smoke at one detector of a healthy pair, or a time delay, is not part of the logic. With the warning, cargo ventilation, where fitted, is isolated: the isolation valves close and the extraction fan stops."
+        "text" : "Each cavity has two detectors, one on each loop, and the warning normally needs both of them to see smoke. If one detector is inoperative, the other is enough on its own. Smoke at only one detector of a working pair does not trigger it, and there is no time delay in the logic. With the warning, cargo ventilation, where fitted, is isolated, so the isolation valves close and the extraction fan stops."
       },
       "id" : "fire-protection-1009",
       "options" : [
@@ -9097,7 +9097,7 @@
         "set" : "claude-variant"
       },
       "status" : "verified",
-      "stem" : "In a cargo compartment, when does smoke in one ceiling cavity trigger the cargo smoke warning?",
+      "stem" : "When does smoke in one cargo ceiling cavity trigger the cargo smoke warning?",
       "topics" : [
         "fire-protection"
       ],
@@ -9109,7 +9109,7 @@
           "FCOM-DSC-26-50-10 p.1849"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -9309,7 +9309,7 @@
           "FCTM-PR-AEP-F_CTL",
           "FCOM-PRO-ABN-MISC"
         ],
-        "text" : "20 000 ft is the maximum operating altitude with the slats or the flaps extended. The limit matters when slats or flaps are jammed: a diversion must then be flown at or below 20 000 ft. Likewise, the stall recovery procedure selects flaps 1 only when clean and below that altitude."
+        "text" : "20 000 ft is the maximum operating altitude with the slats or the flaps extended. The limit matters when slats or flaps are jammed: you must then fly a diversion at or below 20 000 ft. Likewise, in the stall recovery procedure you select flaps 1 only when clean and below that altitude."
       },
       "id" : "flight-controls-0040",
       "options" : [
@@ -9431,7 +9431,7 @@
         "references" : [
           "FCOM-DSC-27-20-10-30"
         ],
-        "text" : "67° is the most the bank can reach with full lateral stick in normal law. Up to 33° the aircraft holds the bank with the stick at neutral; beyond 33° bank angle protection gives positive spiral stability, so the crew must hold the stick to stay there, and auto trim stops. With the angle of attack protection active, the limit drops to 45°, and with high speed protection to 40°."
+        "text" : "67° is the most the bank can reach with full lateral stick in normal law. Up to 33° the aircraft holds the bank with the stick at neutral; beyond 33° bank angle protection gives positive spiral stability, so you must hold the stick to stay there, and auto trim stops. With the angle of attack protection active, the limit drops to 45°, and with high speed protection to 40°."
       },
       "id" : "flight-controls-0057",
       "options" : [
@@ -9537,7 +9537,7 @@
         "references" : [
           "FCOM-PRO-ABN-F_CTL"
         ],
-        "text" : "With a jammed surface, the FMS approach speed does not match the real configuration, so the procedure asks the crew to decelerate to the VAPP they calculated and keep the selected speed. The PFD still helps: the overspeed alert and VLS follow the actual slat and flap position. The autopilot is not used below 500 ft AGL. During the configuration the speed is selected at VFE NEXT − 5 kt before each lever step."
+        "text" : "With a jammed surface, the FMS approach speed does not match the real configuration, so the procedure asks you to decelerate to the VAPP you calculated and keep the selected speed. The PFD still helps: the overspeed alert and VLS follow the actual slat and flap position. You do not use the autopilot below 500 ft AGL. During the configuration you select the speed at VFE NEXT − 5 kt before each lever step."
       },
       "id" : "flight-controls-0108",
       "options" : [
@@ -9585,7 +9585,7 @@
       ],
       "difficulty" : 3,
       "explanation" : {
-        "confuseWith" : "The aircraft does not flare by itself in manual flight: the system lowers the nose, and the pilot's gentle pull makes the flare.",
+        "confuseWith" : "The aircraft does not flare by itself in manual flight: the system lowers the nose, and your gentle pull makes the flare.",
         "images" : [
 
         ],
@@ -9593,7 +9593,7 @@
           "FCOM-DSC-27-20-10-20",
           "CBT-27-FLIGHT_CONTROLS"
         ],
-        "text" : "Passing 50 ft RA the trim stops and flare mode takes over, close to a direct stick-to-elevator relationship. The attitude held at 50 ft becomes the pitch reference. Passing 30 ft, the system starts to reduce that reference towards −2° nose down over about 8 s, which gives the landing a conventional feel. The pilot therefore makes a gentle nose-up input to flare."
+        "text" : "Passing 50 ft RA the trim stops and flare mode takes over, close to a direct stick-to-elevator relationship. The attitude held at 50 ft becomes the pitch reference. Passing 30 ft, the system starts to reduce that reference towards −2° nose down over about 8 s, which gives the landing a conventional feel. You therefore make a gentle nose-up input to flare."
       },
       "id" : "flight-controls-0312",
       "options" : [
@@ -9648,7 +9648,7 @@
           "FCOM-PRO-ABN-F_CTL",
           "FCOM-DSC-27-10-10"
         ],
-        "text" : "The FCDCs gather ELAC and SEC data and pass it on to the displays and the maintenance system. With both lost, the ELACs and SECs keep flying in normal law, but the F/CTL page data, the flight control ECAM warnings, the bank and pitch limits and the Vα prot and Vα max strips on the PFD are gone. The crew therefore watches the flight control panel on the overhead."
+        "text" : "The FCDCs gather ELAC and SEC data and pass it on to the displays and the maintenance system. With both lost, the ELACs and SECs keep flying in normal law, but the F/CTL page data, the flight control ECAM warnings, the bank and pitch limits and the Vα prot and Vα max strips on the PFD are gone. You therefore watch the flight control panel on the overhead."
       },
       "id" : "flight-controls-0706",
       "options" : [
@@ -9819,7 +9819,7 @@
       ],
       "difficulty" : 2,
       "explanation" : {
-        "confuseWith" : "In MAN the pumps run without these stops, and the crew must switch them OFF when the centre tank is empty.",
+        "confuseWith" : "In MAN the pumps run without these stops, and you must switch them OFF when the centre tank is empty.",
         "images" : [
 
         ],
@@ -9890,7 +9890,7 @@
           "FCOM-PRO-ABN-FUEL",
           "AFM-ABN-28"
         ],
-        "text" : "With low level in both inner tanks the aircraft must land as soon as possible. If the centre tank is not empty, its fuel is sent to the wings or fed directly, and all the wing pumps are set on. With no leak, the crossfeed is opened so that both engines can use the fuel left in either wing. If the engines are fed by gravity, the crossfeed is set off again, as in the gravity fuel feeding procedure."
+        "text" : "With low level in both inner tanks you must land as soon as possible. If the centre tank is not empty, you send its fuel to the wings or feed it directly, and set all the wing pumps on. With no leak, you open the crossfeed so that both engines can use the fuel left in either wing. If the engines are fed by gravity, you set the crossfeed off again, as in the gravity fuel feeding procedure."
       },
       "id" : "fuel-0106",
       "options" : [
@@ -10011,7 +10011,7 @@
         "references" : [
           "FCOM-PRO-ABN-FUEL"
         ],
-        "text" : "Above FL 150 the crossfeed is opened so that the right tank pumps feed both engines. Below FL 150 the procedure closes it, and as long as it stays closed engine 1 is fed by gravity from the left tank. The crew then follows the GRAVITY FUEL FEEDING procedure and avoids negative g load, which could interrupt a gravity feed."
+        "text" : "Above FL 150 you open the crossfeed so that the right tank pumps feed both engines. Below FL 150 you close it, and as long as it stays closed engine 1 is fed by gravity from the left tank. You then follow the GRAVITY FUEL FEEDING procedure and avoid negative g load, which could interrupt a gravity feed."
       },
       "id" : "fuel-1502",
       "options" : [
@@ -10060,7 +10060,7 @@
       ],
       "difficulty" : 2,
       "explanation" : {
-        "confuseWith" : "MAN mode lets the crew run the centre pumps by hand; it does not lift the take-off prohibition.",
+        "confuseWith" : "MAN mode lets you run the centre pumps by hand; it does not lift the take-off prohibition.",
         "images" : [
 
         ],
@@ -10068,7 +10068,7 @@
           "AFM-LIM-28",
           "FCOM-DSC-28-20"
         ],
-        "text" : "False: take-off on centre tank feeding is prohibited, whatever the pump mode. That is why, at AUTO, the centre tank pumps stop when the slats are extended and run again only once the slats are retracted, apart from their 2 min run at each engine start. The engines are then fed from the wing tanks during take-off. MAN mode gives the crew control of the pumps, not an exemption from the limitation."
+        "text" : "False: take-off on centre tank feeding is prohibited, whatever the pump mode. That is why, at AUTO, the centre tank pumps stop when the slats are extended and run again only once the slats are retracted, apart from their 2 min run at each engine start. The engines are then fed from the wing tanks during take-off. MAN mode gives you control of the pumps, not an exemption from the limitation."
       },
       "id" : "fuel-1010",
       "options" : [
@@ -10117,7 +10117,7 @@
         "references" : [
 
         ],
-        "text" : "About 30 seconds to 1 minute. This is the time a person can still act sensibly, for example put on an oxygen mask, before hypoxia takes over; unconsciousness follows soon after. It shrinks quickly with altitude, from 3 to 5 minutes at FL 250 to about 15 to 20 seconds at FL 400, and a rapid decompression cuts it further. So the crew puts the masks on first, at once."
+        "text" : "About 30 seconds to 1 minute. This is the time a person can still act sensibly, for example put on an oxygen mask, before hypoxia takes over; unconsciousness follows soon after. It shrinks quickly with altitude, from 3 to 5 minutes at FL 250 to about 15 to 20 seconds at FL 400, and a rapid decompression cuts it further. So you put the mask on first, at once."
       },
       "id" : "human-performance-0001",
       "options" : [
@@ -10219,7 +10219,7 @@
       ],
       "difficulty" : 2,
       "explanation" : {
-        "confuseWith" : "The valve closes above 264 kt; below 260 kt the supply still stays cut until the gear lever is selected down.",
+        "confuseWith" : "The valve closes above 264 kt; below 260 kt the supply still stays cut until you select the gear lever down.",
         "images" : [
 
         ],
@@ -10287,7 +10287,7 @@
           "FCOM-DSC-29-20",
           "FCOM-DSC-24-20"
         ],
-        "text" : "Only by hand. The RAT extends automatically only when both main AC buses are unpowered with the speed above 100 kt, and it then also drives the emergency generator. A hydraulic failure, even of two systems, does not extend it. To get blue pressure from the RAT, the crew presses the guarded RAT MAN ON pushbutton."
+        "text" : "Only when you press the guarded RAT MAN ON pushbutton. A hydraulic failure, even of two systems, does not extend the RAT. It extends by itself only when both main AC buses are unpowered with the speed above 100 kt, and it then also drives the emergency generator. So if you want blue pressure from the RAT after a hydraulic failure, you extend it yourself."
       },
       "id" : "hydraulics-0033",
       "options" : [
@@ -10314,7 +10314,7 @@
         "set" : "technical-questions"
       },
       "status" : "verified",
-      "stem" : "For hydraulic system malfunctions, when will the RAT deploy?",
+      "stem" : "After a hydraulic system failure, when will the RAT deploy?",
       "topics" : [
         "hydraulics"
       ],
@@ -10328,7 +10328,7 @@
           "FCOM-DSC-24-20 p.1771"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -10352,7 +10352,7 @@
           "FCOM-PRO-ABN-HYD",
           "FCOM-DSC-70-70"
         ],
-        "text" : "Losing the green system takes away reverser 1, landing gear retraction and normal braking, along with the autobrake, spoilers 1 and 5 and yaw damper 1. Braking is then on the yellow system, as alternate braking with anti-skid, and the slats and flaps move slowly. The gear can still be lowered by gravity. Reverser 2 belongs to the yellow side, so it stays available."
+        "text" : "Losing the green system takes away reverser 1, landing gear retraction and normal braking, along with the autobrake, spoilers 1 and 5 and yaw damper 1. Braking is then on the yellow system, as alternate braking with anti-skid, and the slats and flaps move slowly. You can still lower the gear by gravity. Reverser 2 belongs to the yellow side, so it stays available."
       },
       "id" : "hydraulics-0037",
       "options" : [
@@ -10873,7 +10873,7 @@
         "references" : [
           "FCOM-DSC-31-20"
         ],
-        "text" : "The arrow means the STATUS page holds more than fits on screen. It appears when the content overflows the left or right part of the page, and the crew presses CLR to scroll to the rest. The page itself sums up the aircraft state: limitations and procedures in blue, inoperative systems in amber, information in green, and cancelled cautions and maintenance status in white."
+        "text" : "The arrow means the STATUS page holds more than fits on screen. It appears when the content overflows the left or right part of the page, and you press CLR to scroll to the rest. The page itself sums up the aircraft state: limitations and procedures in blue, inoperative systems in amber, information in green, and cancelled cautions and maintenance status in white."
       },
       "id" : "indicating-recording-0001",
       "options" : [
@@ -10901,7 +10901,7 @@
         "set" : "technical-questions"
       },
       "status" : "verified",
-      "stem" : "On a bottom of the STATUS page, what does the green arrow mean?",
+      "stem" : "At the bottom of the STATUS page, what does the green arrow mean?",
       "topics" : [
         "indicating-recording"
       ],
@@ -10913,7 +10913,7 @@
           "FCOM-DSC-31-20 p.2131"
         ]
       },
-      "version" : 2
+      "version" : 3
     },
     {
       "correct" : [
@@ -10921,7 +10921,7 @@
       ],
       "difficulty" : 1,
       "explanation" : {
-        "confuseWith" : "Two DMCs work normally; the third is a standby that the crew switches in.",
+        "confuseWith" : "Two DMCs work normally; the third is a standby that you switch in.",
         "images" : [
 
         ],
@@ -10985,7 +10985,7 @@
           "FCOM-DSC-31-30",
           "FCOM-DSC-31-20"
         ],
-        "text" : "With the EMER CANC pushbutton. A caution cancelled this way loses its chime, MASTER CAUT lights and ECAM message until the flight ends, and the STATUS page then lists it in white as a cancelled caution. If the crew needs it back, holding the RCL pushbutton for more than 3 seconds recalls every alert cancelled this way."
+        "text" : "With the EMER CANC pushbutton. A caution cancelled this way loses its chime, MASTER CAUT lights and ECAM message until the end of the flight, and the STATUS page lists it in white as a cancelled caution. If you need it back, holding the RCL pushbutton for more than 3 seconds recalls every alert cancelled this way."
       },
       "id" : "indicating-recording-0027",
       "options" : [
@@ -11012,7 +11012,7 @@
         "set" : "technical-questions"
       },
       "status" : "verified",
-      "stem" : "How did the PNF cancel the caution for the NAV ILS 1 FAULT before calling the STATUS page on the ECP?",
+      "stem" : "Before calling the STATUS page on the ECP, how do you cancel the NAV ILS 1 FAULT caution?",
       "topics" : [
         "indicating-recording"
       ],
@@ -11026,7 +11026,7 @@
           "FCOM-DSC-31-20 p.2131"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -11042,7 +11042,7 @@
           "FCOM-DSC-31-40",
           "FCOM-DSC-31-45"
         ],
-        "text" : "North of 73° North or south of 60° South. In those regions the heading scale shows true heading instead of magnetic, and a true-heading label appears on the PFD and ND to tell the crew. Elsewhere the scale shows magnetic heading against the fixed yellow reference line, with the actual track as a small green diamond."
+        "text" : "North of 73° North or south of 60° South. In those regions the heading scale shows true heading instead of magnetic, and a true-heading label appears on the PFD and ND to tell you. Elsewhere the scale shows magnetic heading against the fixed yellow reference line, with the actual track as a small green diamond."
       },
       "id" : "indicating-recording-0041",
       "options" : [
@@ -11153,7 +11153,7 @@
         "references" : [
           "FCTM-AS-BIRD"
         ],
-        "text" : "The bird shows where the aircraft is going, so it reacts only after the inertia of the aircraft has been overcome. In a dynamic manoeuvre such as a take-off or a go-around that delay makes it a poor reference, while the attitude responds at once to the sidestick. That is why, when TOGA is selected, the bird is removed automatically and the FD bars come back in SRS and GA TRK."
+        "text" : "The bird shows where the aircraft is going, so it reacts only after the inertia of the aircraft has been overcome. In a dynamic manoeuvre such as a take-off or a go-around that delay makes it a poor reference, while the attitude responds at once to the sidestick. That is why, when you select TOGA, the bird is removed automatically and the FD bars come back in SRS and GA TRK."
       },
       "id" : "indicating-recording-0712",
       "options" : [
@@ -11209,7 +11209,7 @@
           "FCOM-DSC-31-15",
           "FCTM-AOP-30-60"
         ],
-        "text" : "No. After most primary failures the E/WD lists each affected system with a star. In ELEC EMER CONFIG the E/WD does not show that list: the secondary failures are inhibited. The crew uses the ELEC EMER CONFIG procedure, its STATUS page and the QRH summary to see what remains. The STATUS page still lists the systems that are inoperative."
+        "text" : "No. After most primary failures the E/WD lists each affected system with a star. In ELEC EMER CONFIG the E/WD does not show that list: the secondary failures are inhibited. You use the ELEC EMER CONFIG procedure, its STATUS page and the QRH summary to see what remains. The STATUS page still lists the systems that are inoperative."
       },
       "id" : "indicating-recording-1504",
       "options" : [
@@ -11318,7 +11318,7 @@
           "FCOM-DSC-32-10-10",
           "FCOM-DSC-32-30-10"
         ],
-        "text" : "Only the green hydraulic system powers the landing gear, moving every gear leg and every gear door. Two LGCIUs sequence the gear electrically, while green pressure does the work. Above 264 kt a safety valve shuts off this green supply. If green is lost, the crew lowers the gear with the hand crank, which isolates the gear hydraulics and lets gravity drop the gear."
+        "text" : "Only the green hydraulic system powers the landing gear, moving every gear leg and every gear door. Two LGCIUs sequence the gear electrically, while green pressure does the work. Above 264 kt a safety valve shuts off this green supply. If green is lost, you lower the gear with the hand crank, which isolates the gear hydraulics and lets gravity drop the gear."
       },
       "id" : "landing-gear-0001",
       "options" : [
@@ -11424,7 +11424,7 @@
       ],
       "difficulty" : 2,
       "explanation" : {
-        "confuseWith" : "Even after a training extension the reset is an in-flight action; on the ground after the flight it must not be done.",
+        "confuseWith" : "Even after a training extension you reset it only in flight, never on the ground after the flight.",
         "images" : [
 
         ],
@@ -11432,7 +11432,7 @@
           "FCOM-PRO-ABN-LG",
           "FCOM-DSC-32-10-10"
         ],
-        "text" : "The free-fall system may be reset only after a gravity extension made for training, and only in flight with green hydraulic pressure available. The reset then lets the gear doors close. After a real gravity extension the procedure forbids a reset, because it could cause a further fluid loss through a leak, or a gear unlock if a selector valve is jammed in the UP position. A reset on the ground after the flight is not allowed either."
+        "text" : "You may reset the free-fall system only after a gravity extension made for training, and only in flight with green hydraulic pressure available. The reset then lets the gear doors close. After a real gravity extension the procedure forbids a reset, because it could cause a further fluid loss through a leak, or a gear unlock if a selector valve is jammed in the UP position. You must not reset it on the ground after the flight either."
       },
       "id" : "landing-gear-0021",
       "options" : [
@@ -11657,7 +11657,7 @@
           "FCOM-PRO-ABN-LG",
           "FCOM-DSC-32-10-10"
         ],
-        "text" : "The lever is put DOWN so that the panel and the WHEEL page agree with the gear: the red UNLK lights go out and no L/G CTL message stays on the SD. The lever at DOWN also guards against a gear retraction on the ground if an unknown fault is present when the free-fall system is reset. The handcrank itself does the real work: three turns cut the hydraulic supply, unlock the doors and release the uplocks, and the gear falls."
+        "text" : "You put the lever DOWN so that the panel and the WHEEL page agree with the gear: the red UNLK lights go out and no L/G CTL message stays on the SD. The lever at DOWN also guards against a gear retraction on the ground if an unknown fault is present when the free-fall system is reset. The handcrank itself does the real work: three turns cut the hydraulic supply, unlock the doors and release the uplocks, and the gear falls."
       },
       "id" : "landing-gear-0703",
       "options" : [
@@ -11713,7 +11713,7 @@
           "FCOM-PRO-ABN-LG",
           "FCTM-PR-AEP-LG"
         ],
-        "text" : "With one main gear missing, landing with the wing on that side lighter keeps it up longer, so the nacelle touches later. To get there, the QRH opens the crossfeed and switches off the pumps on the side whose gear is normally down, so both engines burn fuel from the other side, the side with the missing gear. If the fuel imbalance advisory then appears, it can be disregarded."
+        "text" : "With one main gear missing, landing with the wing on that side lighter keeps it up longer, so the nacelle touches later. To get there, you open the crossfeed and stop the pumps in the wing whose gear came down normally, so both engines burn fuel from the other side, the side with the missing gear. If the fuel imbalance advisory then appears, you can disregard it."
       },
       "id" : "landing-gear-0715",
       "options" : [
@@ -11770,7 +11770,7 @@
           "FCTM-PR-AEP-BRK",
           "FCOM-DSC-32-30-10"
         ],
-        "text" : "By the time the parking brake is used, the LOSS OF BRAKING procedure has already removed the anti-skid, and the parking brake applies full pressure. So it is used in short, successive applications, delayed until the speed is low when possible. This reduces the risk of a tyre burst and of lateral control difficulty. An asymmetry may be felt at each application."
+        "text" : "By the time the parking brake is used, the LOSS OF BRAKING procedure has already removed the anti-skid, and the parking brake applies full pressure. So you use it in short, successive applications, delayed until the speed is low when possible. This reduces the risk of a tyre burst and of lateral control difficulty. An asymmetry may be felt at each application."
       },
       "id" : "landing-gear-0728",
       "options" : [
@@ -11826,7 +11826,7 @@
         "references" : [
           "FCTM-PR-NP-SOP-100"
         ],
-        "text" : "After take-off the hot brakes are retracted into the wheel well. If a hydraulic leak sprayed fluid onto them there, a brake that is too hot could set it alight. The take-off brake temperature limit keeps the brakes cool enough to prevent that. With the brake fans running the indicated temperature reads lower than the real one, but the indicated value is still used, and the take-off is delayed above 150 °C."
+        "text" : "After take-off the hot brakes are retracted into the wheel well. If a hydraulic leak sprayed fluid onto them there, a brake that is too hot could set it alight. The take-off brake temperature limit keeps the brakes cool enough to prevent that. With the brake fans running the indicated temperature reads lower than the real one, but you still use the indicated value and delay the take-off above 150 °C."
       },
       "id" : "landing-gear-0740",
       "options" : [
@@ -11907,7 +11907,7 @@
         "set" : "claude-variant"
       },
       "status" : "verified",
-      "stem" : "On the stand with both engines stopped, the brake accumulator pressure is low. How can the crew recharge it?",
+      "stem" : "On the stand with both engines stopped, the brake accumulator pressure is low. How can you recharge it?",
       "topics" : [
         "landing-gear",
         "hydraulics"
@@ -11922,7 +11922,7 @@
           "FCOM-DSC-29-10-20 p.2021"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -11990,7 +11990,7 @@
         "references" : [
           "FCOM-PRO-ABN-NAV"
         ],
-        "text" : "10° with climb thrust. The memory items are used only when flight safety is at stake. AP, A/THR and FDs go off first, then the crew sets the pitch and thrust pair for the flight phase. Below the thrust reduction altitude it is 15° with TOGA; above it, 10° with CLB below FL 100 and 5° with CLB above FL 100. The crew also keeps the configuration, checks the speedbrakes retracted and the gear up, and levels off for troubleshooting at or above MSA or circuit altitude."
+        "text" : "10° with climb thrust. The memory items are used only when flight safety is at stake. You set AP, A/THR and FDs off first, then the pitch and thrust pair for the flight phase. Below the thrust reduction altitude it is 15° with TOGA; above it, 10° with CLB below FL 100 and 5° with CLB above FL 100. You also keep the configuration, check the speedbrakes retracted and the gear up, and level off for troubleshooting at or above MSA or circuit altitude."
       },
       "id" : "memory-items-0001",
       "options" : [
@@ -12016,7 +12016,7 @@
         "set" : "pilot-ideas"
       },
       "status" : "verified",
-      "stem" : "UNRELIABLE SPEED INDICATION memory items, safe conduct of the flight affected. Above the thrust reduction altitude and below FL 100, which pitch and thrust?",
+      "stem" : "UNRELIABLE SPEED INDICATION, safe conduct of the flight affected. You are above the thrust reduction altitude and below FL 100. Which pitch and thrust do the memory items give?",
       "topics" : [
         "memory-items",
         "navigation"
@@ -12030,7 +12030,7 @@
           "FCOM-PRO-ABN-NAV p.4166"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -12046,7 +12046,7 @@
           "FCTM-AS-TCAS",
           "FCOM-PRO-ABN-SURV"
         ],
-        "text" : "For a corrective RA like CLIMB, the PF follows the green area within 5 s, smoothly and firmly, at about 0.25 g. A stronger or reversed order, such as CLIMB NOW or INCREASE CLIMB, needs a faster response: within 2.5 s at about 0.35 g. A preventive RA such as MONITOR V/S asks the crew not to change the flight path and to keep the vertical speed out of the red area. A TA alone never justifies a manoeuvre."
+        "text" : "For a corrective RA like CLIMB, the PF follows the green area within 5 s, smoothly and firmly, at about 0.25 g. A stronger or reversed order, such as CLIMB NOW or INCREASE CLIMB, needs a faster response: within 2.5 s at about 0.35 g. A preventive RA such as MONITOR V/S asks you not to change the flight path and to keep the vertical speed out of the red area. A TA alone never justifies a manoeuvre."
       },
       "id" : "memory-items-0013",
       "options" : [
@@ -12102,7 +12102,7 @@
           "FCOM-PRO-ABN-SURV",
           "FCOM-DSC-34-SURV-40-40"
         ],
-        "text" : "Mode 5 warns of a descent below the glide slope. When the approach conditions call for a deliberate path below the beam, the procedure lets the crew set the G/S MODE pb-sw to OFF, which inhibits only that alert. When the path below the beam is not deliberate, the crew corrects the deviation while still high enough, and considers a go-around once below the stabilisation height of 1 000 ft (IMC) or 500 ft (VMC) above the airfield."
+        "text" : "Mode 5 warns of a descent below the glide slope. When the approach conditions call for a deliberate path below the beam, the procedure lets you set the G/S MODE pb-sw to OFF, which inhibits only that alert. When the path below the beam is not deliberate, you correct the deviation while still high enough, and consider a go-around once below the stabilisation height of 1 000 ft (IMC) or 500 ft (VMC) above the airfield."
       },
       "id" : "memory-items-0312",
       "options" : [
@@ -12128,7 +12128,7 @@
         "set" : "trn-presentations"
       },
       "status" : "verified",
-      "stem" : "The approach procedure deliberately requires flying below the glide slope, and the GPWS calls GLIDESLOPE. What may the crew do?",
+      "stem" : "The approach procedure deliberately requires flying below the glide slope, and the GPWS calls GLIDESLOPE. What may you do?",
       "topics" : [
         "memory-items",
         "navigation"
@@ -12142,7 +12142,7 @@
           "FCOM-DSC-34-SURV-40-40 p.2555"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -12157,7 +12157,7 @@
         "references" : [
           "FCOM-PRO-ABN-SURV"
         ],
-        "text" : "Below 1 000 ft AAL in IMC, or below 500 ft AAL in VMC, SINK RATE means the crew considers a go-around. Higher up, the crew adjusts pitch and thrust to silence the alert. TOO LOW GEAR and TOO LOW FLAPS, by contrast, always call for a go-around, and a PULL UP warning at night or in IMC calls for the full pull-up manoeuvre."
+        "text" : "Below 1 000 ft AAL in IMC, or below 500 ft AAL in VMC, SINK RATE means you consider a go-around. Higher up, you correct pitch and thrust until the alert goes silent. TOO LOW GEAR and TOO LOW FLAPS, by contrast, always call for a go-around, and a PULL UP warning at night or in IMC calls for the full pull-up manoeuvre."
       },
       "id" : "memory-items-0511",
       "options" : [
@@ -12267,7 +12267,7 @@
         "references" : [
           "FCOM-PRO-ABN-MISC"
         ],
-        "text" : "Masks first, then the signs, then the descent. The procedure puts the protection of the crew before everything else, ahead of the passengers and of the descent itself. The signs come on for the passengers, and then the PF initiates the descent. With A/THR off, the thrust levers go to idle; ATC, the PA announcement and the squawk follow once the descent is established."
+        "text" : "Masks first, then the signs, then the descent. The procedure puts the protection of the crew before everything else, ahead of the passengers and of the descent itself. The signs come on for the passengers, and then the PF initiates the descent. With A/THR off, you bring the thrust levers to idle; ATC, the PA announcement and the squawk follow once the descent is established."
       },
       "id" : "memory-items-1021",
       "options" : [
@@ -12320,7 +12320,7 @@
         "references" : [
           "WMO-306-FM15-15_5"
         ],
-        "text" : "The group gives the two extreme directions the wind blew from during the 10 minutes before the observation, written clockwise. It is added only when the total swing is 60° or more but under 180°, and the mean speed is at least 3 kt. Here the mean wind is 240° at 8 kt, swinging between 200° and 280°. For the runway crosswind check, both extremes matter, not only the mean."
+        "text" : "The group gives the two extreme directions the wind blew from during the 10 minutes before the observation, written clockwise. It is added only when the total swing is 60° or more but under 180°, and the mean speed is at least 3 kt. Here the mean wind is 240° at 8 kt, swinging between 200° and 280°. When you check the runway crosswind, both extremes matter, not only the mean."
       },
       "id" : "meteorology-0001",
       "options" : [
@@ -12373,7 +12373,7 @@
         "references" : [
           "WMO-306-FM15-15_11"
         ],
-        "text" : "The group gives the air temperature first and the dew point second, both in whole degrees Celsius, separated by a slash. The letter M in front means minus. Values from −9 °C to 9 °C carry a leading zero. A small gap between the two means moist air; with a temperature below zero, the crew watches for frost and icing on the ground."
+        "text" : "The group gives the air temperature first and the dew point second, both in whole degrees Celsius, separated by a slash. The letter M in front means minus. Values from −9 °C to 9 °C carry a leading zero. A small gap between the two means moist air; with a temperature below zero, you watch for frost and icing on the ground."
       },
       "id" : "meteorology-0014",
       "options" : [
@@ -12750,7 +12750,7 @@
         "references" : [
           "FCOM-DSC-22_10-10"
         ],
-        "text" : "Managed and selected are the two kinds of guidance. In managed guidance the FMGS works out the targets itself and steers the aircraft along the planned route and the vertical and speed profiles. In selected guidance the crew sets the targets with the FCU knobs, for example a heading or a vertical speed, and the aircraft flies to them. Selected guidance always wins over managed guidance, so the crew can take over a target at any moment."
+        "text" : "Managed and selected are the two kinds of guidance. In managed guidance the FMGS works out the targets itself and steers the aircraft along the planned route and the vertical and speed profiles. In selected guidance you set the targets with the FCU knobs, for example a heading or a vertical speed, and the aircraft flies to them. Selected guidance always wins over managed guidance, so you can take over a target at any moment."
       },
       "id" : "navigation-0001",
       "options" : [
@@ -12798,7 +12798,7 @@
       ],
       "difficulty" : 1,
       "explanation" : {
-        "confuseWith" : "Targets that the crew sets on the FCU are selected guidance, not managed guidance.",
+        "confuseWith" : "Targets you set on the FCU are selected guidance, not managed guidance.",
         "images" : [
 
         ],
@@ -12806,7 +12806,7 @@
           "FCOM-DSC-22_10-10",
           "FCOM-DSC-34-NAV-10-10"
         ],
-        "text" : "In managed guidance the aircraft follows lateral, vertical and speed profiles worked out by the FMGS. The FMGS computes the aircraft position continuously and holds the planned route and the vertical and speed profiles, so it can compute the targets and steer along them. Selected guidance is the other case: the crew sets heading, speed or altitude on the FCU and the aircraft flies to those values. The ADIRS supply data to the FMGC; they do not compute profiles."
+        "text" : "In managed guidance the aircraft follows lateral, vertical and speed profiles worked out by the FMGS. The FMGS computes the aircraft position continuously and holds the planned route and the vertical and speed profiles, so it can compute the targets and steer along them. Selected guidance is the other case: you set heading, speed or altitude on the FCU and the aircraft flies to those values. The ADIRS supply data to the FMGC; they do not compute profiles."
       },
       "id" : "navigation-0015",
       "options" : [
@@ -12863,7 +12863,7 @@
           "FCOM-DSC-22_10-30",
           "FCOM-DSC-34-NAV-30-10"
         ],
-        "text" : "Either MCDU: with FMGC 1 failed the system runs in single mode, and an entry on either MCDU goes to the FMGC that still works. Both flight directors and both position monitor pages then use FMGC 2. On some FMS standards the MCDU on the failed side first shows the MCDU MENU page, and the crew connects it to the opposite FMGC with a prompt. The scratchpad then shows OPP FMGC IN PROCESS."
+        "text" : "Either MCDU: with FMGC 1 failed the system runs in single mode, and an entry on either MCDU goes to the FMGC that still works. Both flight directors and both position monitor pages then use FMGC 2. On some FMS standards the MCDU on the failed side first shows the MCDU MENU page, and you connect it to the opposite FMGC with a prompt. The scratchpad then shows OPP FMGC IN PROCESS."
       },
       "id" : "navigation-0027",
       "options" : [
@@ -13025,7 +13025,7 @@
         "references" : [
           "FCOM-DSC-22_10-40-20"
         ],
-        "text" : "The selection is lost and the dashes come back. In managed speed the SPD/MACH window is dashed. Turning the knob shows a value (the current target plus the turn), but this is only a preselection: the crew must pull the knob to engage selected speed on it. If the knob is not pulled, the value stays for 10 s on the SPD/MACH window (45 s on HDG/TRK and V/S) before the dashes return."
+        "text" : "The selection is lost and the dashes come back. In managed speed the SPD/MACH window is dashed. Turning the knob shows a value (the current target plus the turn), but this is only a preselection: you must pull the knob to engage selected speed on it. If the knob is not pulled, the value stays for 10 s on the SPD/MACH window (45 s on HDG/TRK and V/S) before the dashes return."
       },
       "id" : "navigation-0064",
       "options" : [
@@ -13080,7 +13080,7 @@
         "references" : [
           "FCOM-PRO-ABN-NAV"
         ],
-        "text" : "LOC only. With both radio altimeters failed, the STATUS page shows that the LOC modes remain, armed and captured with the LOC pb, but G/S capture and track are not available. CAT 2 is lost as well. The approach is flown with LOC guidance only, and the vertical path is the crew's task. The landing is made in CONF 3 at VREF + 10 kt, and the flight controls go to direct law when the gear is down."
+        "text" : "LOC only. With both radio altimeters failed, the STATUS page shows that the LOC modes remain, armed and captured with the LOC pb, but G/S capture and track are not available. CAT 2 is lost as well. You fly the approach with LOC guidance only and manage the vertical path yourself. You land in CONF 3 at VREF + 10 kt, and the flight controls go to direct law when the gear is down."
       },
       "id" : "navigation-0305",
       "options" : [
@@ -13136,7 +13136,7 @@
         "references" : [
           "FCOM-PRO-ABN-NAV"
         ],
-        "text" : "With ADR 2 failed, a single FCU channel drives both baro reference channels. The ECAM therefore asks the crew to check the baro reference displays: the FCU and both PFDs should show the same setting. The other actions are to switch the F/O air data to ADR 3 and to set ADR 2 OFF. The STATUS page then shows CAT 3 SINGLE ONLY."
+        "text" : "With ADR 2 failed, a single FCU channel drives both baro reference channels. The ECAM therefore asks you to check the baro reference displays: the FCU and both PFDs should show the same setting. You also switch the F/O air data to ADR 3 and set ADR 2 OFF. The STATUS page then shows CAT 3 SINGLE ONLY."
       },
       "id" : "navigation-0701",
       "options" : [
@@ -13216,7 +13216,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "In climb, the crew wants to see traffic well above the aircraft on the ND. Which TRAFFIC selector position gives the widest view upward?",
+      "stem" : "In climb, you want to see traffic well above the aircraft on the ND. Which TRAFFIC selector position gives the widest view upward?",
       "topics" : [
         "navigation",
         "indicating-recording"
@@ -13230,7 +13230,7 @@
           "FCOM-DSC-34-SURV-60-20 p.2582"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "context" : "On aircraft with the EXPED pb.",
@@ -13358,7 +13358,7 @@
           "FCOM-LIM-AG-SPD",
           "FCOM-DSC-27-30-10"
         ],
-        "text" : "215 kt is the limit for CONF 1+F, because the flaps are still out as well as the slats. With the lever at 1 the aircraft can be in two configurations: 1+F, with slats and flaps, limited to 215 kt, and 1, slats only, limited to 230 kt. If the crew does not select flaps 0, the flaps run in by themselves at 210 kt, just before the limit is reached, and the slats stay out."
+        "text" : "215 kt is the limit for CONF 1+F, because the flaps are still out as well as the slats. With the lever at 1 the aircraft can be in two configurations: 1+F, with slats and flaps, limited to 215 kt, and 1, slats only, limited to 230 kt. If you do not select flaps 0, the flaps run in by themselves at 210 kt, just before the limit is reached, and the slats stay out."
       },
       "id" : "operating-limitations-0501",
       "options" : [
@@ -13468,7 +13468,7 @@
         "references" : [
           "FCOM-LIM-ENG"
         ],
-        "text" : "TFLEX may be neither lower than the flat rated temperature TREF nor lower than the actual OAT; both are floors, and the crew must respect the higher of the two. The maximum flexible temperature is the opposite end of the band, the highest TFLEX allowed. A FLEX take-off is also allowed only if the aircraft meets every performance requirement with the thrust of that temperature, and never on a contaminated runway."
+        "text" : "TFLEX may be neither lower than the flat rated temperature TREF nor lower than the actual OAT; both are floors, and you must respect the higher of the two. The maximum flexible temperature is the opposite end of the band, the highest TFLEX allowed. A FLEX take-off is also allowed only if the aircraft meets every performance requirement with the thrust of that temperature, and never on a contaminated runway."
       },
       "id" : "operating-limitations-0526",
       "options" : [
@@ -13525,7 +13525,7 @@
           "FCOM-LIM-AFS-10",
           "FCOM-PRO-NOR-SOP-15"
         ],
-        "text" : "No. The FMS fuel, time and performance predictions are for advisory purposes only. In cruise the crew also checks FOB plus fuel used against the departure figure. The FMGS approval also assumes a validated navigation database, and obstacle clearance stays a crew responsibility, whatever mode is flown."
+        "text" : "No. The FMS fuel, time and performance predictions are for advisory purposes only. In cruise you also check FOB plus fuel used against the departure figure. The FMGS approval also assumes a validated navigation database, and obstacle clearance stays your responsibility, whatever mode is flown."
       },
       "id" : "operating-limitations-0539",
       "options" : [
@@ -13573,7 +13573,7 @@
         "references" : [
           "AFM-ABN-GEN"
         ],
-        "text" : "No. The crew first assesses the runway condition from the type and depth of the contaminant. Friction measurements or pilot reports of braking action may be used in addition, but the landing distance must not be based on a better braking action than the one tied to that runway condition. With more than 3 mm of slush the limit is MEDIUM TO POOR, whatever a report says."
+        "text" : "No. You first assess the runway condition from the type and depth of the contaminant. Friction measurements or pilot reports of braking action may be used in addition, but the landing distance must not be based on a better braking action than the one tied to that runway condition. With more than 3 mm of slush the limit is MEDIUM TO POOR, whatever a report says."
       },
       "id" : "operating-limitations-0709",
       "options" : [
@@ -13716,7 +13716,7 @@
           "FCOM-DSC-31-20",
           "FCOM-DSC-35-20-20"
         ],
-        "text" : "The crew oxygen cylinder pressure appears as a figure in PSI on the DOOR/OXY system page of the lower ECAM display. The oxygen shares that page with the doors, so it is easy to look for the figure on the wrong page. The figure stays green while the pressure is normal and turns amber when it is low. On the ground, a low figure is the cue to compare it with the minimum crew oxygen pressure in the limitations."
+        "text" : "The crew oxygen cylinder pressure appears as a figure in PSI on the DOOR/OXY system page of the lower ECAM display. The oxygen shares that page with the doors, so it is easy to look for the figure on the wrong page. The figure stays green while the pressure is normal and turns amber when it is low. On the ground, if the figure is low, you compare it with the minimum crew oxygen pressure in the limitations."
       },
       "id" : "oxygen-0001",
       "options" : [
@@ -13774,7 +13774,7 @@
           "FCOM-DSC-35-30-10",
           "FCOM-DSC-35-30-20"
         ],
-        "text" : "Each mask container is held shut by an electrical latch that opens automatically at the release cabin altitude, or when the crew presses MASK MAN ON. If an electrical failure prevents this, crew members can open the container doors with a manual release tool. After the masks have been restowed, the system can be reset for rearming, and the PASSENGER SYS ON light stays on until a maintenance reset."
+        "text" : "Each mask container is held shut by an electrical latch that opens automatically at the release cabin altitude, or when you press MASK MAN ON. If an electrical failure prevents this, crew members can open the container doors with a manual release tool. After the masks have been restowed, the system can be reset for rearming, and the PASSENGER SYS ON light stays on until a maintenance reset."
       },
       "id" : "oxygen-0506",
       "options" : [
@@ -13828,7 +13828,7 @@
         "references" : [
           "QRH-OPS-03A"
         ],
-        "text" : "The trip fuel penalty is the fuel still to be burnt (fuel on board minus the estimated fuel on board at destination) multiplied by the sum of the applicable factors. These factors are conservative guideline values. The FMS predictions must then be recomputed with this penalty. A factor applies only if the conditions in its table row, such as a surface shown extended, are really met."
+        "text" : "The trip fuel penalty is the fuel still to be burnt (fuel on board minus the estimated fuel on board at destination) multiplied by the sum of the applicable factors. These factors are conservative guideline values. You must then recompute the FMS predictions with this penalty. A factor applies only if the conditions in its table row, such as a surface shown extended, are really met."
       },
       "id" : "performance-0001",
       "options" : [
@@ -14383,7 +14383,7 @@
           "FCOM-PRO-NOR-SOP-06",
           "FCOM-DSC-24-20"
         ],
-        "text" : "Setting the BAT pb-sw OFF then AUTO starts a charging cycle of the batteries. About 10 s later the current of each battery should be below 60 A and falling. If a battery is not yet below 60 A, the crew waits for the end of the charging cycle and checks again. The cycle itself ends when the charge current falls below 4 A."
+        "text" : "Setting the BAT pb-sw OFF then AUTO starts a charging cycle of the batteries. About 10 s later the current of each battery should be below 60 A and falling. If a battery is not yet below 60 A, you wait for the end of the charging cycle and check again. The cycle itself ends when the charge current falls below 4 A."
       },
       "id" : "standard-procedures-0001",
       "options" : [
@@ -14439,7 +14439,7 @@
           "FCOM-PRO-NOR-SOP-11",
           "FCOM-LIM-APU"
         ],
-        "text" : "Packs take bleed air from the engines, so with the packs off, or fed by the APU, each engine does less work for the same thrust. On a FLEX take-off this lowers the EGT and so the maintenance cost; on a TOGA take-off it gives more performance. FLEX itself saves the most in its first few degrees. APU bleed is not used for take-off when wing anti-ice will be needed, because APU air may never supply it."
+        "text" : "Packs take bleed air from the engines, so with the packs off, or fed by the APU, each engine does less work for the same thrust. On a FLEX take-off this lowers the EGT and so the maintenance cost; on a TOGA take-off it gives more performance. FLEX itself saves the most in its first few degrees. You do not use APU bleed for take-off when wing anti-ice will be needed, because APU air may never supply it."
       },
       "id" : "standard-procedures-0013",
       "options" : [
@@ -14494,7 +14494,7 @@
         "references" : [
           "FCTM-PR-NP-SOP-190-CONF"
         ],
-        "text" : "In NAV mode the flight plan sequences by itself, but in HDG it does so only when the aircraft passes close to the route. If the old waypoints stay, the missed approach may not be ready for a go-around, and distances and the vertical deviation are wrong. The TO waypoint on the ND is a good check. The fix is DIR TO RADIAL IN, or clearing the FROM waypoint until the next likely waypoint is the TO waypoint."
+        "text" : "In NAV mode the flight plan sequences by itself, but in HDG it does so only when the aircraft passes close to the route. If the old waypoints stay, the missed approach may not be ready for a go-around, and distances and the vertical deviation are wrong. The TO waypoint on the ND is a good check. To fix it, you use DIR TO RADIAL IN, or clear the FROM waypoint until the next likely waypoint is the TO waypoint."
       },
       "id" : "standard-procedures-0025",
       "options" : [
@@ -14520,7 +14520,7 @@
         "set" : "pilot-ideas"
       },
       "status" : "verified",
-      "stem" : "Radar vectors in HDG mode, and the waypoints do not sequence. Why must the crew sequence the flight plan before the approach?",
+      "stem" : "Radar vectors in HDG mode, and the waypoints do not sequence. Why must you sequence the flight plan before the approach?",
       "topics" : [
         "standard-procedures",
         "autoflight",
@@ -14536,7 +14536,7 @@
           "FCOM-DSC-22_30-40-80-10 p.1473"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -14551,7 +14551,7 @@
         "references" : [
           "FCOM-PRO-NOR-SOP-17"
         ],
-        "text" : "Past the computed top of descent, every mile flown level puts the aircraft further above the ideal path. The PFD and MCDU show T/D REACHED or DECELERATE, which suggests slowing towards green dot speed, if ATC agrees, so that less energy has to be lost later. When the descent clearance comes, the crew engages DES with managed speed."
+        "text" : "Past the computed top of descent, every mile flown level puts the aircraft further above the ideal path. The PFD and MCDU show T/D REACHED or DECELERATE, which suggests slowing towards green dot speed, if ATC agrees, so that less energy has to be lost later. When the descent clearance comes, you engage DES with managed speed."
       },
       "id" : "standard-procedures-0310",
       "options" : [
@@ -14577,7 +14577,7 @@
         "set" : "trn-presentations"
       },
       "status" : "verified",
-      "stem" : "ATC delays the descent, and the aircraft passes the T/D in cruise. What does the FMS show, and what should the crew do?",
+      "stem" : "ATC delays the descent, and the aircraft passes the T/D in cruise. What does the FMS show, and what should you do?",
       "topics" : [
         "standard-procedures",
         "autoflight"
@@ -14591,7 +14591,7 @@
           "FCOM-DSC-22_30-40-60-30 p.1445"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -14606,7 +14606,7 @@
         "references" : [
           "FCTM-PR-NP-SOP-250"
         ],
-        "text" : "Most landing tail strikes come from departures from the normal technique. Holding the aircraft off for a smooth touchdown keeps the pitch rising, and as the nose goes up the pilot looks further ahead and misjudges the attitude, so the pitch can pass the critical angle. A speed well below VAPP before the flare, a too high flare, a high sink rate near the ground and raising the pitch after a bounce have the same effect."
+        "text" : "Most landing tail strikes come from departures from the normal technique. Holding the aircraft off for a smooth touchdown keeps the pitch rising, and as the nose goes up you look further ahead and misjudge the attitude, so the pitch can pass the critical angle. A speed well below VAPP before the flare, a too high flare, a high sink rate near the ground and raising the pitch after a bounce have the same effect."
       },
       "id" : "standard-procedures-0322",
       "options" : [
@@ -14660,7 +14660,7 @@
         "references" : [
           "FCTM-PR-NP-SOP-190-GUI"
         ],
-        "text" : "The final turn onto the runway centreline starts with about 20° of bank. The descent begins gently, at about 400 ft/min, and increases to about 700 ft/min once the aircraft is on the correct descent path. Landing configuration and VAPP must be reached no lower than 500 ft above the airfield, or the crew goes around."
+        "text" : "The final turn onto the runway centreline starts with about 20° of bank. The descent begins gently, at about 400 ft/min, and increases to about 700 ft/min once the aircraft is on the correct descent path. Landing configuration and VAPP must be reached no lower than 500 ft above the airfield, or you go around."
       },
       "id" : "standard-procedures-0335",
       "options" : [
@@ -14771,7 +14771,7 @@
         "references" : [
           "FCOM-PRO-NOR-SOP-12"
         ],
-        "text" : "After a tailstrike the aircraft must be checked for damage, so the crew avoids any altitude that needs a pressurised cabin and returns to the departure airport for a damage assessment. The SOP guards against a tailstrike by rotating at about 3°/s toward 15° and following SRS, and by avoiding a fast rotation near the ground in a go-around."
+        "text" : "After a tailstrike the aircraft must be checked for damage, so you avoid any altitude that needs a pressurised cabin and return to the departure airport for a damage assessment. The SOP guards against a tailstrike by rotating at about 3°/s toward 15° and following SRS, and by avoiding a fast rotation near the ground in a go-around."
       },
       "id" : "standard-procedures-0521",
       "options" : [
@@ -14826,7 +14826,7 @@
         "references" : [
           "FCOM-PRO-NOR-SUP-ADVWXR"
         ],
-        "text" : "In cold weather the engine oil is thick, and during the start the oil pressure indication may show amber XX for that reason alone. The crew can expect this. After the first engine start, probe and window heat goes back to AUTO, and the heating then goes on working automatically."
+        "text" : "In cold weather the engine oil is thick, and during the start the oil pressure indication may show amber XX for that reason alone. You can expect this. After the first engine start, you set probe and window heat back to AUTO, and the heating then goes on working automatically."
       },
       "id" : "standard-procedures-0710",
       "options" : [
@@ -15016,7 +15016,7 @@
         "set" : "claude-written"
       },
       "status" : "verified",
-      "stem" : "Approach to a sea-level airport, 25 °C colder than ISA. The FAF is published at 2 000 ft above the airport. Using the FCTM rule of thumb, about how much should be added to it?",
+      "stem" : "Approach to a sea-level airport, 25 °C colder than ISA. The FAF is published at 2 000 ft above the airport. Using the FCTM rule of thumb, about how much do you add to it?",
       "topics" : [
         "standard-procedures",
         "navigation"
@@ -15030,7 +15030,7 @@
           "FCTM-PR-NP-SP-10-10-1 p.355"
         ]
       },
-      "version" : 1
+      "version" : 2
     },
     {
       "correct" : [
@@ -15045,7 +15045,7 @@
         "references" : [
           "FCTM-PR-NP-SOP-110"
         ],
-        "text" : "Taking the pack air from the APU keeps the engines at their no-bleed performance while the cabin is air-conditioned. If the APU shuts down during the take-off, the engine thrust is frozen until the crew reduces it manually. The packs then take engine bleed air, and the EGT rises as the engines hold the same N1 or EPR."
+        "text" : "Taking the pack air from the APU keeps the engines at their no-bleed performance while the cabin is air-conditioned. If the APU shuts down during the take-off, the engine thrust is frozen until you reduce it manually. The packs then take engine bleed air, and the EGT rises as the engines hold the same N1 or EPR."
       },
       "id" : "standard-procedures-0760",
       "options" : [
@@ -15093,14 +15093,14 @@
       ],
       "difficulty" : 3,
       "explanation" : {
-        "confuseWith" : "40 ft is the FLARE check and 10 ft the RETARD callout; THR IDLE is checked between them, at 30 ft.",
+        "confuseWith" : "40 ft is the FLARE check and 10 ft the RETARD callout; you check THR IDLE between them, at 30 ft.",
         "images" : [
 
         ],
         "references" : [
           "FCOM-PRO-NOR-SOP-19"
         ],
-        "text" : "At 30 ft RA. The autoland sequence has fixed check points: LAND on the FMA and the course pointer at 350 ft, FLARE at 40 ft, THR IDLE at 30 ft, and the automatic RETARD callout at 10 ft, when the PF brings both thrust levers to idle and the A/THR disconnects. Each check confirms the next stage of the automatic landing has started."
+        "text" : "At 30 ft RA. During an autoland you check fixed points on the way down: LAND on the FMA and the course pointer at 350 ft, FLARE at 40 ft and THR IDLE at 30 ft. At 10 ft the automatic RETARD callout comes, the PF brings both thrust levers to idle and the A/THR disconnects. Each check confirms that the next stage of the automatic landing has started."
       },
       "id" : "standard-procedures-1008",
       "options" : [
@@ -15126,7 +15126,7 @@
         "set" : "claude-variant"
       },
       "status" : "verified",
-      "stem" : "Autoland. At which radio height does the crew check THR IDLE on the FMA?",
+      "stem" : "Autoland. At which radio height do you check THR IDLE on the FMA?",
       "topics" : [
         "standard-procedures",
         "autoflight"
@@ -15139,7 +15139,7 @@
           "FCOM-PRO-NOR-SOP-19 p.4564"
         ]
       },
-      "version" : 1
+      "version" : 2
     }
   ],
   "referenceTitles" : {
