@@ -91,7 +91,7 @@ line.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duratio
 if (navigator.connection && navigator.connection.saveData) root.classList.add('save-data');
 const descent = $('.descent'), photo = $('.hero-photo img'), heroWords = $('.hero .text');
 const sm = x => { x = Math.min(1, Math.max(0, x)); return x * x * (3 - 2 * x); };
-const snap = x => { const i = Math.floor(x); return i + sm((x - i - .35) / .3); };
+const descentPos = (y, span) => AP + (DOORS - AP) * sm((y / span - .1) / .75);
 function descentFrame(r) {
 if (still() || root.classList.contains('save-data')) { photo.style.transform = heroWords.style.transform = heroWords.style.opacity = ''; return; }
 r = r || descent.getBoundingClientRect(); const span = r.height - innerHeight;
@@ -100,7 +100,7 @@ const p = Math.min(1, Math.max(0, -r.top / span));
 photo.style.transform = `scale(${(1 + .3 * sm(p)).toFixed(4)})`;
 heroWords.style.transform = `translateY(${(-60 * p).toFixed(1)}px)`;
 heroWords.style.opacity = Math.max(0, 1 - p * 2).toFixed(3);
-if (!rolling) hero22(AP + (DOORS - AP) * sm((p - .1) / .75));
+if (!rolling) hero22(descentPos(-r.top, span));
 }
 const rev = $('#how');
 const pulse = scope => $$('.hl', scope).forEach(h => { h.classList.remove('on'); void h.offsetWidth; h.classList.add('on'); });
@@ -131,7 +131,7 @@ function revealFrame(r) {
 if (root.classList.contains('save-data') || short()) return;
 r = r || pin.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
 const p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))), t = p * 3;
-const k = Math.min(2, Math.floor(t)), pan = k + sm((t - k - .2) / .6);
+const pan = t;
 film.style.transform = `translateX(${(-pan * 100).toFixed(2)}%)`;
 const c = a0 + (a1 - a0) * p - 12;
 if (wide.matches) { ac.style.transform = `translateY(${c.toFixed(1)}px)`; flown.style.transform = `scaleY(${p.toFixed(4)})`; }
@@ -139,7 +139,7 @@ else { ac.style.transform = `translateX(${c.toFixed(1)}px) rotate(-90deg)`; flow
 const near = Math.round(t);
 wps.forEach((w, i) => { w.classList.toggle('on', i === near); w.classList.toggle('past', i < near); w.classList.toggle('at', i === near && Math.abs(t - near) < .2); });
 minis.forEach((m, i) => { const d = i - t; m.style.transform = `translateY(${(d * 70).toFixed(1)}px)`; m.style.opacity = Math.min(1, Math.max(0, 1 - Math.abs(d) * 1.8)).toFixed(3); });
-if (Math.abs(pan - 2) < .01 && !hlLit) { pulse(film); hlLit = true; }
+if (Math.abs(pan - 2) < .02 && !hlLit) { pulse(film); hlLit = true; }
 if (Math.abs(pan - 2) > .3 && hlLit) { hlLit = false; filmHl.classList.remove('on'); }
 }
 const ppPin = $('.pp-pin'), pair = $('.pp .pair'), BOX = JSON.parse(pair.dataset.boxes), ppBoxes = $$('.pp .box'), srcs = $$('.pp .srcs li');
@@ -150,7 +150,7 @@ function panelFrame(r) {
 if (root.classList.contains('save-data') || short()) return;
 r = r || ppPin.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
 if (!boxSize.length || !boxSize[0][0]) measureBoxes();
-const t = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))) * 3, k = Math.min(2, Math.floor(t)), f = sm((t - k - .3) / .4);
+const t = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight))) * 3, k = Math.min(2, Math.floor(t)), f = t - k;
 const mix = (a, b) => a.map((v, i) => v + (b[i] - v) * f);
 place(0, mix(BOX[k].photo, BOX[k + 1].photo)); place(1, mix(BOX[k].drawn, BOX[k + 1].drawn));
 const on = Math.round(t); srcs.forEach((l, i) => l.classList.toggle('on', i === on));
@@ -217,16 +217,22 @@ r = r || closeSec.getBoundingClientRect(); if (r.top > innerHeight || r.bottom <
 const p = Math.min(1, Math.max(0, (innerHeight - r.top) / (r.height + innerHeight * .3)));
 dawn.style.opacity = (p * p).toFixed(3);
 }
-const sec = $('#topics'), ro = $('#readout'), cnt = $('#tape-count'), stops = $('.stops', sec), N = S.length;
+const sec = $('#topics'), ro = $('#readout'), cnt = $('#tape-count'), N = S.length;
 const CODES = { 'Systems': 'ATA chapters, <span class="code">21</span> to <span class="code">70</span>', 'Limitations': 'FCOM part <span class="code">LIM</span>', 'Procedures': 'FCOM part <span class="code">PRO</span>', 'Weather': 'EASA ATPL subject <span class="code">050</span>', 'General aviation': 'Codes: <span class="code">PERF</span>, <span class="code">ATC</span>, <span class="code">ABBR</span>, <span class="code">MATH</span>', 'ATPL revision': 'EASA ATPL subject numbers' };
 const num = n => n.toLocaleString('en-GB').replace(',', ' ');
-const LEN = [], CUM = [0];
+const LEN = [], CUM = [0], KN = [];
 const layoutTape = () => {
 const ph = innerWidth <= 900 ? .75 : 1;
 S.forEach((s, k) => { LEN[k] = Math.round(Math.max(180, 22 * (s.b - s.a + 1)) * ph); CUM[k + 1] = CUM[k] + LEN[k]; });
 if (!tapeStill()) sec.style.height = `calc(100svh + ${CUM[S.length]}px)`; else sec.style.height = '';
-$$('i', stops).forEach((el, k) => { el.style.top = `${CUM[k] + .12 * LEN[k]}px`; });
+KN.length = 0;
+S.forEach((s, k) => { const n = s.b - s.a + 1; for (let j = 0; j < n; j++) KN.push([CUM[k] + LEN[k] * (.12 + (n > 1 ? .62 * j / (n - 1) : 0)), s.a + j]); });
 sec.dataset.stops = JSON.stringify(CUM);
+};
+const tapePos = y => {
+if (y <= KN[0][0]) return KN[0][1];
+for (let i = 1; i < KN.length; i++) if (y <= KN[i][0]) { const [y0, p0] = KN[i - 1], [y1, p1] = KN[i]; return p0 + (p1 - p0) * (y - y0) / (y1 - y0); }
+return KN[KN.length - 1][1];
 };
 S.forEach((s, k) => {
 const n = s.b - s.a + 1;
@@ -234,7 +240,6 @@ ro.insertAdjacentHTML('beforeend', `<div class="t"><p class="sec"><b>${k + 1} of
 `<p class="meta"><span class="qn"><b>${num(s.q)}</b> questions</span><span>${CODES[s.name] || ''}</span></p>` +
 `<p class="tops">${T.slice(s.a, s.b + 1).map((t, j) => `<span data-i="${s.a + j}">${t.name.replace(/, /g, ' / ')}</span>`).join('')}</p>` +
 `<p class="steps">${S.map((x, j) => `<i class="${j === k ? 'on' : ''}"></i>`).join('')}</p></div>`);
-stops.insertAdjacentHTML('beforeend', `<i style="--k:${k}"></i>`);
 });
 layoutTape(); addEventListener('resize', layoutTape);
 const reads = $$('.t', ro), tops = $$('.tops span', ro), topics = drum($('#topics-tape'));
@@ -257,13 +262,72 @@ function tapeFrame(r) {
 r = r || sec.getBoundingClientRect(); if (r.bottom < -50 || r.top > innerHeight + 50) return;
 const y = Math.min(CUM[N] - 1e-3, Math.max(0, -r.top));
 let k = 0; while (k < N - 1 && y >= CUM[k + 1]) k++;
-const f = (y - CUM[k]) / LEN[k], s = S[k], nx = S[k + 1];
-const pos = snap(f < .12 ? s.a : f < .74 ? s.a + (s.b - s.a) * sm((f - .12) / .62) : nx ? s.b + (nx.a - s.b) * sm((f - .74) / .26) : s.b);
+const f = (y - CUM[k]) / LEN[k], nx = S[k + 1];
+const pos = tapePos(y);
 topics(pos);
 const near = Math.round(pos), shown = f > .9 && nx ? k + 1 : k;
 if (shown !== last) { reads.forEach((el, i) => { el.classList.toggle('on', i === shown); el.classList.toggle('up', i < shown); }); last = shown; }
 if (T[near].k !== lastSec) { lastSec = T[near].k; cnt.textContent = `Section ${lastSec + 1} of ${N}`; counter(S[lastSec]); }
 if (near !== lit) { tops.forEach(el => el.classList.toggle('lit', +el.dataset.i === near)); lit = near; follow(); }
+}
+const SCENES = [
+{ el: descent, on: () => !root.classList.contains('save-data') && !rolling, pos: descentPos },
+{ el: pin, on: () => !root.classList.contains('save-data') && !short(), pos: (y, span) => 3 * y / span },
+{ el: ppPin, on: () => !root.classList.contains('save-data') && !short(), pos: (y, span) => 3 * y / span },
+{ el: sec, on: () => !tapeStill(), span: () => CUM[N], pos: y => tapePos(y) },
+];
+const pick = (p, dir, eps = 1e-3) => { const lo = Math.floor(p + eps), hi = Math.ceil(p - eps); return hi <= lo ? null : dir > 0 ? hi : dir < 0 ? lo : p - lo < hi - p ? lo : hi; };
+const spring = (t, response) => { const w = 2 * Math.PI / response; return 1 - (1 + w * t) * Math.exp(-w * t); };
+let userAt = -1e9, touching = false, held = false, dir = 0, prevY = scrollY, quiet = 0, glide = 0;
+const stopGlide = () => { if (glide) cancelAnimationFrame(glide); glide = 0; };
+const input = () => { userAt = performance.now(); stopGlide(); clearTimeout(quiet); };
+const own = () => performance.now() - userAt < 4000; // the scroll still follows the reader's own input (iOS momentum runs ~3 s)
+const later = () => { clearTimeout(quiet); quiet = setTimeout(settle, 160); };
+addEventListener('wheel', input, { passive: true });
+addEventListener('touchstart', () => { touching = true; input(); }, { passive: true });
+addEventListener('touchmove', () => { userAt = performance.now(); }, { passive: true });
+const lift = e => { if (!e.touches.length) { touching = false; later(); } };
+addEventListener('touchend', lift, { passive: true }); addEventListener('touchcancel', lift, { passive: true });
+addEventListener('pointerdown', e => { if (e.pointerType === 'mouse') held = true; input(); }, { passive: true });
+addEventListener('pointerup', () => { if (held) { held = false; if (own()) later(); } }, { passive: true });
+addEventListener('keydown', e => { stopGlide(); if (/^(Arrow(Up|Down)|Page(Up|Down)|Home|End| )$/.test(e.key)) userAt = performance.now(); });
+addEventListener('scroll', () => {
+const y = scrollY;
+if (glide) { prevY = y; return; }
+if (y !== prevY) { if (own()) dir = Math.sign(y - prevY); prevY = y; }
+if (own() && !touching) later();
+}, { passive: true });
+function settle() {
+quiet = 0;
+if (still() || touching || held || glide) return;
+const y = scrollY;
+for (const s of SCENES) {
+if (!s.on()) continue;
+const r = s.el.getBoundingClientRect(), span = s.span ? s.span() : r.height - innerHeight, at = -r.top;
+if (!(span > 0) || at <= 0 || at >= span) continue;
+const p = s.pos(at, span), eps = Math.max(1e-3, Math.abs(s.pos(Math.min(span, at + 1.5), span) - s.pos(Math.max(0, at - 1.5), span)) / 2);
+const want = pick(p, dir, eps);
+if (want === null) return;
+const up = want > p;
+let a = 0, b = span;
+for (let i = 0; i < 40; i++) { const m = (a + b) / 2; if (up ? s.pos(m, span) >= want - 1e-6 : s.pos(m, span) > want + 1e-6) b = m; else a = m; }
+glideTo(y + (up ? b : a) - at);
+return;
+}
+}
+function glideTo(to) {
+const from = scrollY, d = to - from;
+if (Math.abs(d) < 1) return;
+if (sysReduce.matches) { scrollTo(0, to); return; } // Reduce Motion: the page rests on the point at once
+const response = Math.min(.55, .3 + Math.abs(d) / 1600), t0 = performance.now();
+let set = from;
+const step = now => {
+if (Math.abs(scrollY - set) > 2) { glide = 0; return; } // the reader moved the page: it is theirs again
+const k = spring((now - t0) / 1000, response), done = Math.abs(d) * (1 - k) < .5;
+set = done ? to : from + d * k; scrollTo(0, set);
+glide = done ? 0 : requestAnimationFrame(step);
+};
+glide = requestAnimationFrame(step);
 }
 let raf = 0, live = false;
 const frame = () => {
